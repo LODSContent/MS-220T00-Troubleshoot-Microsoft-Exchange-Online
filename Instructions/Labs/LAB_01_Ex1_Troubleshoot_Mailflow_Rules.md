@@ -28,7 +28,7 @@ In order to configure Lab 1:
 
     **Note:** It could take the full 5 minute time-frame for the lab setup process to complete. 
 
-## Excercise 1 - Troubleshoot Mailflow Rules
+## Excercise 1 - Troubleshoot Mailflow
 
 **Insert exc. intro here**
 
@@ -130,7 +130,7 @@ In order to configure Lab 1:
 
 18. Select the **X** in the **This a Test Email** pane to exit the message trace details - you can leave the **EAC** open for now. Then proceed to Task 3.
 
-### Task 3 - Review Transport Rules in Exchange PowerShell
+### Task 3 - Review Transport Rules
 
 **Task 3 intro here**
 
@@ -168,6 +168,29 @@ In order to configure Lab 1:
 
       Take a few minutes to review the commands output for configuration details.
 
-11. After reviewing the configuration output within **PowerShell** for **Rule 1**, we should now have an idea on *why* our message sent to a user within the domain **Contoso.com** was blocked. Specifically, the following outputs and their values tell us important configuration information:
+11. After reviewing the configuration output within PowerShell for **Rule 1**, we should now have an idea on *why* our message sent to a user within the domain **Contoso.com** was blocked. Specifically, the following values tell us important configuration information:
 
     ![Screenshot of Get-TransportRule Output](/Images/Get_TransportRule_Output.png)
+
+12. We will now switch from PowerShell to the user interface (UI) for rules within the **EAC**. 
+
+    Close the PowerShell window and then select the **Microsoft Edge** icon on the taskbar. The **EAC** should open up to the **Message trace search results** page. 
+
+    If you exited out of edge, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
+    
+    if prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique
+    tenant prefix provided by your lab hosting provider) and the tenant password provided.
+
+13. On the left-hand navigation pane in the **EAC** select **Mail flow** and then select **Rules**. 
+
+14. On the **Rule** page that is displayed, Notice the same list of Rules are displayed in the UI that were also output within PowerShell. 
+
+    Select **Rule 1**.
+
+15. On the **Rule 1** details page that appears on the right, take a moment to review the details. They should match what we saw when reviewing the rule within PowerShell. 
+
+16. To resolve our transport issue, we will now disable **Rule 1** by select the slider under **Enable or disable rule**. The rule should now show as disabled. Select the **X** at the top righ-hand corner of the rule details page to exit.
+
+    Back on the **Rules** page, *Rule 1** should now show a status of **Disabled**.
+
+
