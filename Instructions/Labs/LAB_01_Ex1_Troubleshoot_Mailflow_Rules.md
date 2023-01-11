@@ -48,7 +48,7 @@ In order to configure Lab 1:
 
 6. In the message pane that appears on the right-side of the screen, enter the following information:
 
-    - To: enter **User220@contoso.com** (Instead of User, you can type whatever you'd like, so long as its followed by **@contoso.com**)
+    - To: enter **User@contoso.com** 
 
     - Subject: enter **This is a Test Email**
 
@@ -172,7 +172,9 @@ In order to configure Lab 1:
 
     ![Screenshot of Get-TransportRule Output](/Images/Get_TransportRule_Output.png)
 
-12. We will now switch from PowerShell to the user interface (UI) for rules within the **EAC**. 
+    In the current configuration, if any email address constains the words **Contoso.com** it will be reject in transport. When administarting a large organization its always important to fully understand the implications transport rules may have on your business. When in doubt, you can use the test functionality. This way, if you accidentally create a condition that doesn't do exactly what you want or interacts with other rules in unexpected ways, you won't have any unintended consequences. For more information see [Test mail flow rules in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules?azure-portal=true).
+
+12. We will now switch from PowerShell to the **Exchange Admin Center** to view the Rules user interface. 
 
     Close the PowerShell window and then select the **Microsoft Edge** icon on the taskbar. The **EAC** should open up to the **Message trace search results** page. 
 
@@ -189,8 +191,18 @@ In order to configure Lab 1:
 
 15. On the **Rule 1** details page that appears on the right, take a moment to review the details. They should match what we saw when reviewing the rule within PowerShell. 
 
-16. To resolve our transport issue, we will now disable **Rule 1** by select the slider under **Enable or disable rule**. The rule should now show as disabled. Select the **X** at the top righ-hand corner of the rule details page to exit.
+16. To resolve our transport issue, we will now disable **Rule 1** by select the slider under **Enable or disable rule**. 
 
-    Back on the **Rules** page, *Rule 1** should now show a status of **Disabled**.
+    The rule should now show as disabled. Select the **X** at the top righ-hand corner of the rule details page to exit.
 
+    Back on the **Rules** page, **Rule 1** should now show a status of **Disabled**.
 
+    You can now close the **Exchange admin center** tab in your Edge browser. You should still
+
+17. Navigate back to the **Microsoft 365 Admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your edge browser. 
+
+18. Select the **App Launcher** icon at the top left hand corner of the web page and then select the **Outlook** icon under the **Apps** header.
+
+19. Once you are back in **Outlook**, repeat steps 2-7 from task 1 to ensure mail flow is now resolved to **Contoso.com**
+
+# Proceed to Lab 1 Exercise 2
