@@ -36,15 +36,15 @@ In order to configure Lab 1:
 
 **insert task intro here**
 
-1. You should still be logged into LON-CL1 as the **Administrator** with a password of **Pa55w.rd**; however, if the log-in page appears, then log in now
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the log-in page appears, then log in now.
 
-2. You will now access **Outlook for the Web** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>.**
+2. You will now access **Outlook for the Web** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
 
-3. On the **Sign in** page, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in.**
+3. On the **Sign in** page, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in**.
 
-4. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **Yes.**
+4. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **Yes**.
 
-5. You are now signed into MOD Administrators mailbox. You will begin by sending an email to a random user with the domain name **Contoso.com**. In the upper right hand corner, select **New mail**.
+5. You are now signed into MOD Administrators mailbox. You will begin by sending an email to a random user with the domain name **Contoso.com**. In the upper left-hand corner, select **New mail**.
 
 6. In the message pane that appears on the right-side of the screen, enter the following information:
 
@@ -68,15 +68,15 @@ In order to configure Lab 1:
 
 **Task 2 intro here**
 
-1. You should still be logged into LON-CL1 from the prior task with Outlook Web Mail still open inside of Microsoft Edge; if necessary, log in as the **Administrator** with a password of **Pa55w.rd**.
+1. You should still be logged into **LON-CL1** from the prior task with Outlook Web Mail still open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. With **Outlook for the Web** still open, At the top left-hand corner of the web-page, select the **App launcher** icon.
 
 3. In the new pane that opens on the left, under **Apps** select **Admin**.
 
-    **Note:** If prompted to sign in, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in.**
+    **Note:** If prompted to sign in, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in**.
 
-    You can also directly navigate to the Microsoft 365 Admin center by navigating to the following URL: **<https://admin.microsoft.com/>.**
+    You can also directly navigate to the Microsoft 365 Admin center by navigating to the following URL: **<https://admin.microsoft.com/>**.
 
 4. In the **Microsoft 365 Admin Center**, select **Show all**.
 
@@ -86,7 +86,7 @@ In order to configure Lab 1:
 
 6. in the **EAC**, on the left-hand navigation pane, select **Mail flow** and then **Message trace**.
 
-7. On the **Message trace** page, the **Default queries** tab at the top of the page is displayed by default. In the list of queries and reports in this tab, select **Messages sent from my primary domain in the last day.**
+7. On the **Message trace** page, the **Default queries** tab at the top of the page is displayed by default. In the list of queries and reports in this tab, select **Messages sent from my primary domain in the last day**.
 
 8. In the **New message trace** pane that appears, the default values for the **Messages sent from my primary domain in the last day** query are displayed. You can control which messages are selected based on who sent and received the messages and how many days ago the messages were sent.  
 
@@ -134,7 +134,7 @@ In order to configure Lab 1:
 
 **Task 3 intro here**
 
-1. You should still be logged into LON-CL1 from the prior task; if necessary, log in as the **Administrator** with a password of **Pa55w.rd**.
+1. You should still be logged into **LON-CL1** from the prior task; if necessary, log back in as the **Administrator** with a password of **Pa55w.rd**.
 
 2. Once logged into **LON-CL1**, open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
@@ -146,7 +146,7 @@ In order to configure Lab 1:
 
 4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
 
-5. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.**
+5. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All**.
 
 6. At the command prompt, type the following command and press Enter:
 
