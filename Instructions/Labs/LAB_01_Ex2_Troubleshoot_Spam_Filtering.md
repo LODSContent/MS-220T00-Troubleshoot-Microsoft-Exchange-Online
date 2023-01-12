@@ -6,9 +6,12 @@
 
 **Task intro**
 
-1. On **LON-CL1**, sign into **LON-CL1** as “Administrator” with the password **Pa55w.rd**. 
+1. On **LON-CL1**, sign in as **Administrator** with the password **Pa55w.rd**. 
 
-2. You will now access **Microsoft 365 Defender** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://security.microsoft.com/mail/>**.
+2. You will now access **Microsoft 365 Defender** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://security.microsoft.com>**.
+
+    Ff prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique
+    tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
 
 3. In the navigation pane on the left, scroll down to **Email & collaboration** and select **Policies & Rules**.
 
@@ -61,7 +64,7 @@
 
 **Task intro** 
 
-**Note:** in this lab, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal email (@outlook.com, @Hotmail.com, @live.com, etc) to your tenant **@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** in this lab, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal email (@outlook.com, @Hotmail.com, @live.com, etc) to your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -73,7 +76,7 @@
 
 4. In the message pane that appears on the right-side of the screen, enter the following information:
 
-    - To: type in your partners admin email address. this email address will be similar to your admin email adress (admin **@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly. 
+    - To: type in your partners admin email address. this email address will be similar to your admin email adress (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly. 
 
     - Subject: leave blank
 
@@ -83,7 +86,7 @@
 
     When prompted with the message **Missing subject**, select **Send**.
 
-    **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account with the domain of **@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+    **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
 
 6. After about 10-30 seconds you should notice that an emai appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 

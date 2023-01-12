@@ -12,7 +12,7 @@ In your lab environment, your lab hosting provider has already:
 
 In order to configure Lab 1:
 
-1. On **LON-CL1**, you must select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-CL1 as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
+1. On **LON-CL1**, you must select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 1**. In the **Lab 1** subfolder a .bat file named **Lab1setup.bat** should exist.
 
@@ -180,8 +180,7 @@ In order to configure Lab 1:
 
     If you exited out of edge, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
     
-    if prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique
-    tenant prefix provided by your lab hosting provider) and the tenant password provided.
+    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
 
 13. On the left-hand navigation pane in the **EAC** select **Mail flow** and then select **Rules**. 
 
