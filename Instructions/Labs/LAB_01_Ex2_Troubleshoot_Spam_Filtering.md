@@ -168,9 +168,23 @@
 
 3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
 
+     `Install-Module -Name ExchangeOnlineManagement`
+
+4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
+
+5. At the command prompt, type the following command and press Enter:
+
+     `Connect-ExchangeOnline`
+
+6. A **Microsoft 365 Sign in** window will appear. Enter in the username for the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com) and then select **Next**.
+
+7. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
+
+8. At the command prompt, type the following command and press Enter:
+
       `$MessageTrace = Get-MessageTrace -MessageId "Add message ID here copied in Task 3 step 11"`
 
-4. At the command prompt, type the following command and press Enter:
+9. At the command prompt, type the following command and press Enter:
 
       `$MessageTrace | FL`
 
@@ -188,19 +202,19 @@
 
     This may be enough details for some to determine minor mailflow issues, however we can take it a step further using the **Get-MessageTraceDetail** Exchange Online Command-let (CMDLET).
 
-5. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press Enter:
+10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press Enter:
 
       `$MessageTraceId = $MessageTrace.MessageTraceId`
     
-6. At the command prompt, type the following command and press Enter:
+11. At the command prompt, type the following command and press Enter:
 
       `$RecipientAddress = $MessageTrace.RecipientAddress`
 
-7. Now we are ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press Enter:
+12. Now we are ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press Enter:
 
       `Get-MessageTraceDetail -MessageTraceId $MessageTraceId -RecipientAddress $RecipientAddress | FL`
 
-8. Take a minute to review the entire output for the **Get-MessageTraceDetail** CMDLET. 
+13. Take a minute to review the entire output for the **Get-MessageTraceDetail** CMDLET. 
 
     Notice that using this CMDLET shows all of the message event details rather than just the the final message trace results. 
 

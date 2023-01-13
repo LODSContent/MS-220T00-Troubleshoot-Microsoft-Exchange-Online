@@ -184,4 +184,97 @@ Once all settings are correct, select **Submit**.
 
 22. Close out of **Microsoft Edge**.
 
-### Task 3 - 
+### Task 3 - Run a Content Search
+
+**Intro about targeted collections here, and how we will now be deleting the Confidential email sent earlier by Allan Deyoung**
+
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
+
+2. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
+
+4. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+
+     `Install-Module -Name ExchangeOnlineManagement`
+
+      **Note:** Durring the initial lab setup (script) ran at the beginning of this exercise, the Exchange Online Management Module was installed. However, to familiarize yourself with the install process, we are outlining the detailed steps to manually install it. You may receieve a warning that this module is already installed - ignore this.
+
+5. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
+
+6. At the command prompt, type the following command and press Enter:
+
+     `Connect-ExchangeOnline`
+
+7. A **Microsoft 365 Sign in** window will appear. Enter in the username for the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com) and then select **Next**.
+
+8. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
+
+9. At the command prompt, type the following command press Enter:
+
+     `CD C:\Users\administrator\desktop\'Lab scripts'\lab2`
+    
+10. At the command prompt, type the following command press Enter:
+
+    `.\GetFolderSearchParameters.ps1`
+
+11. When prompted **Enter an email address or a URL for a SharPoint or OneDrive for business site** enter: **AlexW@M365xZZZZZZ.onmicrosoft.com**
+
+12. A **Microsoft 365 Sign in** window will appear. Select the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com).
+
+13. A list of Folder Paths & Folder Path iD's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right click to copy.
+
+    Here is an example of what the full sting will like (the letters and numbers will differ, this is just an example):
+
+    **folderid:47EFE4AD1A8641408C8CCB0EDA12ACCE00000000010C0000**
+
+14. We will now start a new compliance search. To do this, we must first connect to the Security & Compliance Powershell module. At the command prompt. type the following command press Enter:
+
+    `Connect-IPPSSession -UserPrincipalName admin@M365xZZZZZZ.onmicrosoft.com`
+
+
+15. Next, at the command prompt, type the following command press Enter:
+
+    `$Search = New-ComplianceSearch -Name "Inbox Search AlexW" -ExchangeLocation All -ContentMatchQuery '"Past FolderId here"(c:c)(subject:Confidential)'`
+
+    **IMPORTANT**: be sure to replace **"Paste FolderId here"** with the Folderid collected in the prior step. There should be no spaces between the FolderId and (C:C). For example:
+
+    **folderid:29563324EDBAD64D94CED5C383FE47E000000000010C0000(c:c)(subject:Confidential)**
+
+16. To start the compliance search, at the command prompt type the following command press Enter:
+
+    `Start-ComplianceSearch -Identity $Search.Identity`
+
+17. It Will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press Enter:
+
+    `Get-ComplianceSearch -Identity "Inbox Search AlexW"`
+
+18. Once the status shows as **Completed**, type the following command press Enter:
+
+    `Get-ComplianceSearch -Identity "Inbox Search AlexW" | FL`
+
+    **Note:**: The search results display all users, but we only have an item count greater than 0 for Alex Wilber. This is because in the command ran above, we have exchangelocation -all. If we want to specifc a single mailbox we can rerun the command and set the exchange location to the SMTP of Alex Wilber.
+
+19. To remove the confidential items identified out of Alex's inbox we will need to start a new compliance action. At the command prompt type the following command press Enter:
+
+    `New-ComplianceSearchAction -SearchName "Inbox Search AlexW" -Purge -PurgeType HardDelete -Confirm:$false`
+
+20. It Will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press Enter:
+
+    `Get-ComplianceSearchAction "Inbox search AlexW_Purge" | FL`
+
+    Once the **Status** shows **Completed** you will see next to **Results** a value = **Purge Type: HardDelete; Item count: 1...**. 
+
+21. Lasly, we will verify that the email has been deleted from the Alex Wilbers inbox. In the **Windows Taskbar**, right-click **Microsoft Edge** and select **New -inPrivate window**.
+
+22. Enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
+
+23. On the **Sign in** page, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in**.
+
+24. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **No**.
+
+25. You are now logged into **Outlook on the Web** against Alex Wilbers Mailbox. Take a few minutes to check Alex's **Inbox** & **Deleted items**. 
+
+    Notice the confidential email sent by **Allan Deyoung** is not visable in any of Alex's mailbox folders. This indicates that you have successfully purged the confidential item.
+
+# Proceed to Lab 2 Exercise 2
+
+
