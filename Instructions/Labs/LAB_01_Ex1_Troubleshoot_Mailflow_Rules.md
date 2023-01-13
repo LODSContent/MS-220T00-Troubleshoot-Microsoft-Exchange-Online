@@ -36,7 +36,7 @@ In order to configure Lab 1:
 
 **insert task intro here**
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the log-in page appears, then log in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
 2. You will now access **Outlook for the Web** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
 
@@ -82,7 +82,7 @@ In order to configure Lab 1:
 
 5. Under the new list of Admin Centers that appears, select **Exchange**.
 
-    A new tab will open inside of edge for The **Exchange Admin Center** (EAC). 
+    A new tab will open inside of Edge for The **Exchange Admin Center** (EAC). 
 
 6. in the **EAC**, on the left-hand navigation pane, select **Mail flow** and then **Message trace**.
 
@@ -178,7 +178,7 @@ In order to configure Lab 1:
 
     Close the PowerShell window and then select the **Microsoft Edge** icon on the taskbar. The **EAC** should open up to the **Message trace search results** page. 
 
-    If you exited out of edge, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
+    If you exited out of Edge, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
     
     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
 
@@ -198,7 +198,7 @@ In order to configure Lab 1:
 
     You can now close the **Exchange admin center** tab in your Edge browser. You should still
 
-17. Navigate back to the **Microsoft 365 Admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your edge browser. 
+17. Navigate back to the **Microsoft 365 Admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your Edge browser. 
 
 18. Select the **App Launcher** icon at the top left hand corner of the web page and then select the **Outlook** icon under the **Apps** header.
 
