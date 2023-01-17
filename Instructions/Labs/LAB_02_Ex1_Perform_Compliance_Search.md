@@ -6,7 +6,7 @@
 
 In this task, you will create an eDiscovery (Standard) case that searches for confidential information being disseminated through email.
 
-1. On **LON-CL1**, you must select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
+1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. You will start by logging into **Allan Deyoung**, a user in your tenant. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
 

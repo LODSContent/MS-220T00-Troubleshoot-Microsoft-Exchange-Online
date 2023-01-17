@@ -6,7 +6,7 @@
 
 **Task intro**
 
-1. On **LON-CL1**, sign in as **Administrator** with the password **Pa55w.rd**. 
+1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. You will now access **Microsoft 365 Defender** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://security.microsoft.com>**.
 
@@ -64,7 +64,7 @@
 
 **Task intro** 
 
-**Note:** in this lab, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal email (@outlook.com, @Hotmail.com, @live.com, etc) to your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal email (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 

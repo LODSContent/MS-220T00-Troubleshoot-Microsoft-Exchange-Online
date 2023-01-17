@@ -12,7 +12,7 @@ In your lab environment, your lab hosting provider has already:
 
 In order to configure Lab 1:
 
-1. On **LON-CL1**, you must select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
+1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 1**. In the **Lab 1** subfolder a .bat file named **Lab1setup.bat** should exist.
 
