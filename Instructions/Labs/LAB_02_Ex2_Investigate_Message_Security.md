@@ -6,11 +6,14 @@
 
 To utilize time more effectively, we are first going to create a new sensitivity label so that it has enough time to replicated by the time we reach task 4.
 
-**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. You will begin by accessing the **Microsoft Purview** compliance portal on **LON-CL1**. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
+
+    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+
 
 3. On the **Sign in** page, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in**.
 
@@ -54,7 +57,7 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
     - Select **+ Add users or groups** and new text box should appear. Enter your partners admin accounts email (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
 
-    **IMPORTANT:** In a later task we will be sending this email account an encrypted message. Please ensure you use a valid email address. If you do not have a partner, instead use a personal email address that you can recieve email with (@Outlook.com, @live.com, @hotmail.com, etc)
+    **IMPORTANT:** In a later task we will be sending this email account an encrypted message. Please ensure you use a valid email address. If you do not have a partner, instead use a personal Microsoft email address that you can recieve email with (@Outlook.com, @live.com, @hotmail.com, etc)
 
     When finished, select **Save** and then select **Next**.
 
@@ -142,4 +145,56 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 In the previous task we created a new Mail flow rule to mark emails with **Secure Message** in the Subject as Highly Confidential. This RMS policy applies Office Message Encryption (OME) with only users in your organization to view the message contents. To determine what types of errors users may encounter when troubleshooting OME issues, we will review what happens when a user does not have permissions to view an email that does not have access to view it in the following task. 
 
-1. 
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
+
+2. The **Microsoft Edge** browser should still be open on the **Exchange Admin Center** tabs. We now want to open **Outlook for the Web** by opening a new tab in Edge and navigating to the following URL: **<https://outlook.office.com/mail/>**.
+
+    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+
+3. In **Outlook on the Web** select **New mail**.
+
+4. In the message pane that appears on the right-side of the screen, enter the following information:
+
+    - To: Type in your partners admin email address. This email address will be similar to your admin email adress (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly.  
+
+    - Subject: enter **Secure Message**
+
+    - Message Body: Enter **Secure Message**
+
+    **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft email address (@Outlook.com, @live.com, @hotmail.com, etc).
+
+7. Select **Send**.
+
+    **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edgt tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select "release email". This issue may happen as Some tenants may have pre-configured quarentine rules in place.
+
+8. You should recieve an email in your inbox with the subject: **Secure Message** from your partners admin account. 
+
+    Alternatively, if you are using a personal Microsoft email account follow the steps below before continuing:
+
+    - Minimize your open Edge browser.
+    
+    - In the Task bar, right click **Microsoft Edge** and select **New InPrivate Window**.
+
+    - Navigate to the following URL: **<https://outlook.office.com/mail/>**
+
+    - Sign in using your personal Microsoft account details.
+
+    - Navigate to your inbox and confirm you see the email with the subject: **Secure Message**.
+
+9. In the message preview, double click the email to open in a new window. You should notice one of two messages displayed:
+
+    **Message 1**: You will see the OME wrapper container
+
+    ![Screenshot of Office Message Encryption wrapper email](/Images/OME_Message1.png)
+
+    If you select **Read the message** > **Log-in with work or school account** > and sign in if prompted. The message body will open and display:
+
+    ![Screenshot of Office Message Encryption body](/Images/OME_Message1_body.png)
+
+    **Message 2**: You will bypass the OME wrapper container and be displayed with and permission error
+
+    ![Screenshot of Office Message Encryption preview](/Images/OME_Message2.png)
+
+
+
+
