@@ -181,19 +181,27 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     - Navigate to your inbox and confirm you see the email with the subject: **Secure Message**.
 
-9. In the message preview, double click the email to open in a new window. You should notice one of two messages displayed:
+9. In the message preview, double click the email to open it in a new window. You should notice one of two possible messages displayed:
 
-    **Message 1**: You will see the OME wrapper container
+    **Message 1** - You will see the OME wrapper container:
 
     ![Screenshot of Office Message Encryption wrapper email](/Images/OME_Message1.png)
 
-    If you select **Read the message** > **Log-in with work or school account** > and sign in if prompted. The message body will open and display:
+    If you select **Read the message** > **Sign in with work or school account** > sign in if prompted, The message body will open and display:
 
     ![Screenshot of Office Message Encryption body](/Images/OME_Message1_body.png)
 
-    **Message 2**: You will bypass the OME wrapper container and be displayed with and permission error
+    **Message 2** - You will bypass the OME wrapper container (no prompt to **read the message**) and be displayed with an insufficient permission error:
 
     ![Screenshot of Office Message Encryption preview](/Images/OME_Message2.png)
+
+    **Note:** In some other scenarios there is a 3rd possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
+
+    In all accounts, no matter how the message is displayed to you / how you open the message, you will be unable to view the message body. This is because your organization / personal Microsoft account was not granted the correct permissions to view internally encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
+
+10. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task. 
+
+
 
 
 
