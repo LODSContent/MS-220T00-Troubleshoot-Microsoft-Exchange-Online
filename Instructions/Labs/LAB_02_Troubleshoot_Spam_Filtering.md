@@ -5,6 +5,7 @@
 In the labs for this course, you are taking on the role of Adatum Corporations Messaging Administrator. You have deployed Microsoft 365 in a virtualized lab environment, and you have been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
 In this lab, you have been tasked with the implementation and testing of a custom spam filtering policy that must contain the following settings:
+
 - Empty messages: **On**
 - Embedded tags in HTML: **On**
 - JavaScript or VBScript in HTML: **On**
@@ -23,7 +24,7 @@ If you do not have a Personal Microsoft Outlook email account, you can sign up f
 
 ### Task 1 - Create a Spam filtering Policy
 
-In this task, you will use the default global admin to sign into Microsoft 365 Defender and modify the existing default Anti-spam inbound policy to reflect the new policy requirements. 
+In this task, you will use the default global admin to sign into Microsoft 365 Defender and modify the existing default Anti-spam inbound policy to reflect the new policy requirements.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
