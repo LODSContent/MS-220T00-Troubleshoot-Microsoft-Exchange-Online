@@ -255,7 +255,17 @@ You will now identify and resolve the issue with the mail flow rule created.
 
 15. A new window displaying **Choose sensitivity labels to publish** will appear. As we have already published this label to the default label policy, select **Cancel**.
 
-16. To test the label behavior, repeat steps 2 through 8 in Task 3 of this lab.
+16. To test the modified label behavior, repeat steps 2 through 8 in Task 3 of this lab.
+
+17. Select the email you just recieved to review the message body.
+
+    **Note:** the email may be in your **Junk Email** Folder.
+
+    You should now be able to view the full message body and its contents:
+
+    ![Screenshot of Office Message Encryption Message](/Images/OME_Working.png)
+
+# Proceed to Lab 3 Exercise 1
 
 
 
