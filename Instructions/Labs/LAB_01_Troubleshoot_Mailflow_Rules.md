@@ -62,7 +62,7 @@ Besides the single VM, you'll also be provided with a Microsoft 365 tenant with 
 
     **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
 
-    **Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+    **Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 ## Instructions
 
@@ -70,7 +70,7 @@ Besides the single VM, you'll also be provided with a Microsoft 365 tenant with 
 
 In this task, you'll use the default global admin to sign in to the Outlook for the web and review the Non-Delivery Report (NDR) identified by your administrator colleague. This task is a crucial first step in identifying any mail flow related issues as NDRs typically have verbose error messages and can influence your initial troubleshooting approach.
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. You'll now access **Outlook for the Web** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
 

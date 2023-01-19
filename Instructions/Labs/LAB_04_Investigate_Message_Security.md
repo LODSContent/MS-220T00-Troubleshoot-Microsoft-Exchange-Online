@@ -6,7 +6,7 @@ Scenario here
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 ## Instructions
 
@@ -100,7 +100,7 @@ To utilize time more effectively, we're first going to create a new sensitivity 
 
 We have been tasked to test the behavior of implementing a new Mail flow rule to encrypt emails when "Top secret" is in the subject field.
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. We'll now navigate to the **Exchange Admin Center** by opening a new tab in Edge and navigating to the following URL: **<https://admin.exchange.microsoft.com/>**.
 
@@ -144,7 +144,7 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 In the previous task we created a new Mail flow rule to add Office Message encryption (OME) to emails with **Project Falcon** in the subject or body. We want to ensure that our external partners are able to view these encrypted emails.
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. The **Microsoft Edge** browser should still be open on the **Exchange Admin Center** tabs. We now want to open **Outlook for the Web** by opening a new tab in Edge and navigating to the following URL: **<https://outlook.office.com/mail/>**.
 
@@ -172,7 +172,7 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
     - Minimize your open Edge browser.
 
-    - In the Task bar, right click **Microsoft Edge** and select **New InPrivate Window**.
+    - In the Task bar, right-click **Microsoft Edge** and select **New InPrivate Window**.
 
     - Navigate to the following URL: **<https://outlook.office.com/mail/>**
 
@@ -206,7 +206,7 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
 You'll now identify and resolve the issue with the mail flow rule created.
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. If not, in a new Edge tab, enter following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
 
@@ -246,7 +246,7 @@ You'll now identify and resolve the issue with the mail flow rule created.
 
     Enter your partners admin account email address (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
 
-    **Note:** If you do not have a partner, instead type in your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc.) that you used earlier in Task 3.
+    **Note:** If you don't have a partner, instead type in your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc.) that you used earlier in Task 3.
 
 12. Once finished adding the correct email address, you should see it displayed under the **Enter email address or domain** text box. Once finished select **Save**.
 

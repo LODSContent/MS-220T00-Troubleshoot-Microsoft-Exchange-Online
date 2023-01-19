@@ -6,7 +6,7 @@ Scenario here
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 ## Instructions
 
@@ -94,7 +94,7 @@ In this task, you'll create an eDiscovery (Standard) case that searches for conf
 Once all settings are correct, select **Submit**.
 
     **Note:** you've just placed a hold on Alex Wilber’s account that will retain any emails that contain **Sensitive, Confidential, Secret** anywhere
-    in the email as well as in the Subject line.
+    in the email and in the Subject line.
 
 31. Once prompted with **Succeeded** select **Done** to close out of the **New Hold** wizard.
 
@@ -128,13 +128,13 @@ Once all settings are correct, select **Submit**.
 
 42. In the **Confidential Search** pane, select **Review sample**.
 
-    Because the **MOD Administrator** account is not assigned the eDiscovery Manager or eDiscover Admin role group, you're unable to view the search results. This is because these eDiscover roles aren't assigned by default to the Organization Management role group, therefore it’s not a part of the Global admin role. For more information, on what permissions you do have as part of the Organization Management role group, see [RBAC roles related to eDiscovery]( https://learn.microsoft.com/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide#rbac-roles-related-to-ediscovery?azure-portal=true).
+    Because the **MOD Administrator** account is not assigned the eDiscovery Manager or eDiscover Admin role group, you're unable to view the search results. This is because these eDiscover roles aren't assigned by default to the Organization Management role group, thereforee it’s not a part of the Global admin role. For more information, on what permissions you do have as part of the Organization Management role group, see [RBAC roles related to eDiscovery]( https://learn.microsoft.com/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide#rbac-roles-related-to-ediscovery?azure-portal=true).
 
     Select **OK** and then select **Close** to exit out of the **Confidential search** pane.
 
 ### Task 2 - Review eDiscovery Permissions
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. The **Microsoft Edge** browser should still have the **AlexWilber-Case01 - Microsoft Purview** tab open. We'll start by first signing out of the **MOD Administrator** account and logging into your organizations eDiscovery case administrators account, **Nestor Wilke**.
 
@@ -194,7 +194,7 @@ Once all settings are correct, select **Submit**.
 
 Intro about targeted collections here and how we'll now be deleting the Confidential email sent earlier by Allan Deyoung
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
@@ -226,7 +226,7 @@ Intro about targeted collections here and how we'll now be deleting the Confiden
 
 11. A **Microsoft 365 Sign in** window will appear. Select the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com).
 
-12. A list of Folder Paths & Folder Path iD's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right click to copy.
+12. A list of Folder Paths & Folder Path iD's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right-click to copy.
 
     Here is an example of what the full sting will like (the letters and numbers will differ, this is just an example):
 

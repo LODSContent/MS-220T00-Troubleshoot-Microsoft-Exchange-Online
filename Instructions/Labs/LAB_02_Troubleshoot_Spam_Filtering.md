@@ -12,13 +12,13 @@ In this lab, you've been tasked with the implementation and testing of a custom 
 - SPF record hard fail: **On**
 - Sender ID filtering hard fail: **On**
 
-Once created, you'll test the behavior of the policy to ensure it is working as expected and fix any issues should they exist.
+Once created, you'll test the behavior of the policy to ensure it's working as expected and fix any issues should they exist.
 
 ## Lab Setup
 
-In this lab exercise, you'll partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
 
-If you do not have a Personal Microsoft Outlook email account, you can sign up for one by navigating to the following the link: **<https://signup.live.com>**.
+If you don't have a Personal Microsoft Outlook email account, you can sign up for one by navigating to the following the link: **<https://signup.live.com>**.
 
 ## Instructions
 
@@ -61,18 +61,18 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
     - Sender ID filtering hard fail: **On**
 
-    **Note:** These next two settings allow you to automatically tag messages as spam when they originate from countries/regions that are to be avoided or distrusted, as well as messages written in specific languages.
+    **Note:** These next two settings allow you to automatically tag messages as spam when they originate from countries/regions that are to be avoided or distrusted, and messages written in specific languages.
 
     - Contains specific languages: **On**  
 
-        You should already know the languages that you want to filter. In the blank field that appears below the **Contains specific languages** field, enter the first letter of a language that you want to filter. This will display all languages that start with that letter (as well as any languages that contain that letter within the name of the language).
+        You should already know the languages that you want to filter. In the blank field that appears below the **Contains specific languages** field, enter the first letter of a language that you want to filter. This will display all languages that start with that letter (and any languages that contain that letter within the name of the language).
 
         Enter a letter and then select a language with the letter in it that you
         want to filter. Repeat this step for a couple of languages.
 
     - From these countries: **On**
 
-      You should already know the countries that you want to filter. In the blank field that appears below the **From these countries** field, enter the first letter of a country that you want to filter. This will display all countries that start with that letter (as well as any countries that contain that letter within the name of the language).
+      You should already know the countries that you want to filter. In the blank field that appears below the **From these countries** field, enter the first letter of a country that you want to filter. This will display all countries that start with that letter (and any countries that contain that letter within the name of the language).
 
       Enter a letter and then select a country with the letter in it that you want to filter. Repeat this step for a couple of countries.
 
@@ -82,15 +82,15 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
 ### Task 2 - Test Anti-spam behavior
 
-In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It is crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the amount of junk email users may receive day to day.
+In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It's crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the number of junk email users may receive day to day.
 
-**Note:**  If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc.). Instructions to create a personal account are in the **Lab setup** Steps above if needed.
+**Note:**  If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc.). Instructions to create a personal account are in the **Lab setup** Steps above if needed.
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. You'll now navigate to **Outlook on the Web**. On the **Anti-spam policies** page, select the **App Launcher** on the top left-hand corner of the screen and under the **Apps** header select the **Outlook** icon.
 
-3. You should now be back into the your **MOD Administrators** mailbox.
+3. You should now be back into your **MOD Administrators** mailbox.
 
     In the upper left-hand corner, select **New mail**.
 
@@ -106,11 +106,11 @@ In this task, you'll be partnering up with a fellow student to exchange emails w
 
     When prompted with the message **Missing subject**, select **Send**.
 
-    **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Rather than logging out of your current Edge browser session, right click the Microsoft Edge icon in the taskbar and select **New InPrivate Window**.
+    **IMPORTANT:** if you don't have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Rather than logging out of your current Edge browser session, right-click the Microsoft Edge icon in the taskbar and select **New InPrivate Window**.
 
 6. After about 10-30 seconds you should notice that an email appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 
-7. The message in the **Junk Email** folder should be from your partners **MOD Administrator** account (or your personal Microsoft Outlook email account if you did not have a student to partner up with). Select the message to open the message preview.
+7. The message in the **Junk Email** folder should be from your partners **MOD Administrator** account (or your personal Microsoft Outlook email account if you didn't have a student to partner up with). Select the message to open the message preview.
 
 8. Take a moment to review the contents of the message and the Mail-Tip warning displayed below **(No subject)**.
 
@@ -146,7 +146,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
     This Article reviews the various anti spam stamps added to a message, but we want to focus on the **Spam Confidence Level** (SCL):
 
-    0 indicates an extremely low probability that the message is spam, while 9 indicates an extremely high probability that the message is spam.
+    0 indicates a low probability that the message is spam, while 9 indicates a high probability that the message is spam.
 
     As the message header indicates our message has an SCL of 9, we'll want to dig further to determine why it was stamped this way.
 
@@ -160,7 +160,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
     Once you've finished reviewing all the fields, close out of the **Anti-spam Message headers in Microsoft 365** tab in Edge and navigate back to the **Message header analyzer** tab.
 
-10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, thats correct! In task 1 of this lab, we modified the default anti-spam inbound policy to enable the following settings:
+10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, that's correct! In task 1 of this lab, we modified the default anti-spam inbound policy to enable the following settings:
 
     - <mark> Empty messages: **On** </mark>
 
@@ -172,7 +172,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
     - Sender ID filtering hard fail: **On**
 
-    Because the message you sent your partner (or yourself using a personal account) contained no subject or message body, it was considered an **Empty message** and therefor labeled as spam and moved to the Junk Email Folder.
+    Because the message you sent your partner (or yourself using a personal account) contained no subject or message body, it was considered an **Empty message** and therefore labeled as spam and moved to the Junk Email Folder.
 
 11. To get ready for the next task, on the **Message header analyzer** Tab, scroll up to the top of the page and expand **Summary**. Copy (Ctrl-c) the **Message Id** without **<** or **>**.
 
@@ -182,7 +182,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
 In this task, you'll be running a message trace using PowerShell instead of using the Message trace functionality built into the Exchange Admin Center (EAC). The purpose of this task is to give you exposure to alternative methods of accomplishing day to day tasks an Exchange Administrator may need to perform.
 
-1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then sign-in now.
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. Minimize the Edge browser window and open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
@@ -236,7 +236,7 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 13. Take a minute to review the entire output for the **Get-MessageTraceDetail** CMDLET.
 
-    Notice that using this CMDLET shows all of the message event details rather than just the the final message trace results.
+    Notice that using this CMDLET shows all of the message event details rather than just the final message trace results.
 
     Running both the **Get-MessageTrace** and **Get-MessageTraceDetails** together is good practice when initially reviewing mail flow issues in your environment.
 
