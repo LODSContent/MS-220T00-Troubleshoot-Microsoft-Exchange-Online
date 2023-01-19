@@ -2,18 +2,17 @@
 
 **Lab 2 ex 2 intro**
 
+
+**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+
+
 ### Task 1 - Create a Sensitivity Label
 
 To utilize time more effectively, we are first going to create a new sensitivity label so that it has enough time to replicated by the time we reach task 4.
 
-**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
-
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
 2. You will begin by accessing the **Microsoft Purview** compliance portal on **LON-CL1**. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
-
-    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
-
 
 3. On the **Sign in** page, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page. Select **Sign in**.
 
@@ -54,10 +53,6 @@ To utilize time more effectively, we are first going to create a new sensitivity
 12. While still on the **Encryption page**, Under the **Assign permissions to a specific user or groups** select the **Assign permissions** link. A new window displaying **Assign permissions** Should now be displayed on the right-hand side of the screen. Configure the following options:
 
     - Select **+ Add users or groups**. From the list of users that is displayed, select **MOD Administrator** & **Allan Deyoung** and then select **Add**.
-
-    - Select **+ Add users or groups** and new text box should appear. Enter your partners admin accounts email (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
-
-    **IMPORTANT:** In a later task we will be sending this email account an encrypted message. Please ensure you use a valid email address. If you do not have a partner, instead use a personal Microsoft Outlook email accoount that you can recieve email with (@Outlook.com, @live.com, @hotmail.com, etc)
 
     When finished, select **Save** and then select **Next**.
 
@@ -121,7 +116,7 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 10. This brings you back to the **Set rule conditions** page. Under **Do the following**, next to **Rights protect message with** select the **Select one** link. 
 
-11. In the **Select RMS template** window that appears, select **Highly Confidential \ All Employees** From the drop down menu and then select **Save**.
+11. In the **Select RMS template** window that appears, select **Project Falcon** From the drop down menu and then select **Save**.
 
 12. Back on the **Set rule conditions** page, leave the **Except if** condition as the default setting, and then select **Next.**
 
@@ -143,7 +138,7 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 ### Task 3 - Test Office Message Encryption Behavior
 
-In the previous task we created a new Mail flow rule to mark emails with **Project Falcon** in the Subject as Highly Confidential. This RMS policy applies Office Message Encryption (OME) with only users in your organization to view the message contents. To determine what types of errors users may encounter when troubleshooting OME issues, we will review what happens when a user does not have permissions to view an email that does not have access to view it in the following task. 
+In the previous task we created a new Mail flow rule to add Office Message encryption (OME) to emails with **Project Falcon** in the subject or body. We want to ensure that our external partners are able to view these encrypted emails.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
@@ -159,13 +154,13 @@ In the previous task we created a new Mail flow rule to mark emails with **Proje
 
     - Subject: enter **Project Falcon**
 
-    - Message Body: Enter **Project Falcon**
+    - Message Body: Enter **Project Falcon Update**
 
     **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc).
 
 7. Select **Send**.
 
-    **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edgt tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select "release email". This issue may happen as Some tenants may have pre-configured quarentine rules in place.
+    **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edge tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select **release email**. This issue may happen as some tenants may have pre-configured quarentine rules in place.
 
 8. You should recieve an email in your inbox with the subject: **Project Falcon** from your partners admin account. 
 
@@ -197,7 +192,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Proje
 
     **Note:** In some other scenarios there is a 3rd possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
 
-    No matter how the message is displayed to you / how you open the message, if you dont have the correct permissions you will be unable to view the message body. This is because your organization / personal Microsoft Outlook email account was not granted the correct permissions to view internally encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
+    No matter how the message is displayed to you / how you open the message, if you dont have the correct permissions you will be unable to view the message body. This is because your organization / personal Microsoft Outlook email account was not granted the correct permissions to view these internal encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message, it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
 
 10. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task. 
 
@@ -205,6 +200,63 @@ In the previous task we created a new Mail flow rule to mark emails with **Proje
 
 
 ### Task 4 - Resolve Office Message Encryption Permission issue
+
+You will now identify and resolve the issue with the mail flow rule created.
+
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
+
+2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. If not, in a new Edge tab, enter following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
+
+     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+
+3. In the **Microsoft Purview** compliance portal, on the left-hand navigation pane, select **Information Protection**.
+
+4. On the **Information protection** page that is displayed, select the **Lables** tab from the menue.
+
+5. In the List of Labels that appear, select **Project Falcon**.
+
+6. In the **Project Falcon** details pane that appears on the right, select **Edit label**.
+
+7. The **Edit Sensitivity Label** page should be displayed. 
+
+    With a partner, or on your own, take a few minutes review the sensitivity labels configuration and attempt to identify the configuration change needed to allow external partners to view encrypted emails sent with the **Project Falcon** label added.
+
+    Once finished reviewing the configuration, proceed to the next steps to see if your solution is correct.
+
+8. In the **Edit Sensitivity label** pane, select **Next** until you reach **Encryption** page.
+
+9. On the **Encryption** page, scroll down to **Assign permissions to specific users and groups** and then select the **Assign permissions** link.
+
+10. On the **Assign permissions** pane that open on the right, we see four options:
+
+    - **Add all users and groups in your organization** 
+
+    - **Add any authenticated users**
+
+    - **Add users or groups**
+
+    - **Add specific email addresses or domains**
+
+    because we want to add specific partner email accounts, we would choose the last option, **Add specific email addresses or domains**.
+
+11. After selecting **Add specific email addresses or domains** a text box should appear displaying **Enter email address or domain**. 
+
+    Enter your partners admin account email address (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
+
+    **Note:** If you do not have a partner, instead type in your personal Microsoft Outlook email accoount (@Outlook.com, @live.com, @hotmail.com, etc) that you used earlier in Task 3.
+
+12. Once finished adding the correct emaill address, you should see it displayed under the **Enter email address or domain** text box. Once finished select **Save**.
+
+13. Back on the **Edit sensitivit label** window, select **Next** until you get to **Review your settings and finish**.
+
+14. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link uder the setting name. When finished reviewing the settings, select **Save label**.
+
+    When prompted **Label updates**, select **Done**.
+
+15. A new window displaying **Choose sensitivity labels to publish** will appear. As we have already published this label to the default label policy, select **Cancel**.
+
+16. To test the label behavior, repeat steps 2 through 8 in Task 3 of this lab.
+
 
 
 
