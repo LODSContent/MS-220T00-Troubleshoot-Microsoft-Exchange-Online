@@ -6,7 +6,7 @@
 
 To utilize time more effectively, we are first going to create a new sensitivity label so that it has enough time to replicated by the time we reach task 4.
 
-**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -57,7 +57,7 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
     - Select **+ Add users or groups** and new text box should appear. Enter your partners admin accounts email (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
 
-    **IMPORTANT:** In a later task we will be sending this email account an encrypted message. Please ensure you use a valid email address. If you do not have a partner, instead use a personal Microsoft email address that you can recieve email with (@Outlook.com, @live.com, @hotmail.com, etc)
+    **IMPORTANT:** In a later task we will be sending this email account an encrypted message. Please ensure you use a valid email address. If you do not have a partner, instead use a personal Microsoft Outlook email accoount that you can recieve email with (@Outlook.com, @live.com, @hotmail.com, etc)
 
     When finished, select **Save** and then select **Next**.
 
@@ -161,7 +161,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     - Message Body: Enter **Secure Message**
 
-    **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft email address (@Outlook.com, @live.com, @hotmail.com, etc).
+    **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc).
 
 7. Select **Send**.
 
@@ -169,7 +169,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
 8. You should recieve an email in your inbox with the subject: **Secure Message** from your partners admin account. 
 
-    Alternatively, if you are using a personal Microsoft email account follow the steps below before continuing:
+    Alternatively, if you are using a personal Microsoft Outlook email account follow the steps below before continuing:
 
     - Minimize your open Edge browser.
     
@@ -177,7 +177,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     - Navigate to the following URL: **<https://outlook.office.com/mail/>**
 
-    - Sign in using your personal Microsoft account details.
+    - Sign in using your personal Microsoft Outlook email account details.
 
     - Navigate to your inbox and confirm you see the email with the subject: **Secure Message**.
 
@@ -197,9 +197,11 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     **Note:** In some other scenarios there is a 3rd possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
 
-    In all accounts, no matter how the message is displayed to you / how you open the message, you will be unable to view the message body. This is because your organization / personal Microsoft account was not granted the correct permissions to view internally encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
+    No matter how the message is displayed to you / how you open the message, if you dont have the correct permissions you will be unable to view the message body. This is because your organization / personal Microsoft Outlook email account was not granted the correct permissions to view internally encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
 
 10. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task. 
+
+    If you are using a per
 
 
 

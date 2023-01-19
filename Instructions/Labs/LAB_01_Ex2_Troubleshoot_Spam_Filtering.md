@@ -64,7 +64,7 @@
 
 **Task intro** 
 
-**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft email (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -90,7 +90,7 @@
 
 6. After about 10-30 seconds you should notice that an emai appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 
-7. The message in the **Junk Email** folder should be from your partners **MOD Administrator** account (or your personal Microsoft email if you did not have a student to partner up with). Select the message to open the message preview.
+7. The message in the **Junk Email** folder should be from your partners **MOD Administrator** account (or your personal Microsoft Outlook email account if you did not have a student to partner up with). Select the message to open the message preview.
 
 8. Take a moment to review the contents of the message and the Mail-Tip warning displayed below **(No subject)**.
 
