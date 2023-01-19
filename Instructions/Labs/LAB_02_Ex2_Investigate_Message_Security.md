@@ -109,15 +109,15 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 4. On the **Rules** page, Select the **+ Add a rule** icon in the menu bar and in the drop-down menu that appears, select **Apply Office 365 Message Encryption and rights protection to messages**.
 
-5. In the **New Transport rule** wizard that appears, under **Set rule conditions** enter **Secure Message** in the **Name** field.
+5. In the **New Transport rule** wizard that appears, under **Set rule conditions** enter **Project Falcon** in the **Name** field.
 
 7. In the **Apply this rule if** drop down menu, select **The subject or body**.
 
      A new drop down menu will be displayed on the right. From this drop down, select **Subject or body includes any of these words.**
 
-8. In the **specify words or phrases** window that appears, enter **Secure Message** in the text field and then select **Add**.
+8. In the **specify words or phrases** window that appears, enter **Project Falcon** in the text field and then select **Add**.
 
-9. The word **Secure Message** should be displayed below the text field. Once completed, select **Save**.
+9. The word **Project Falcon** should be displayed below the text field. Once completed, select **Save**.
 
 10. This brings you back to the **Set rule conditions** page. Under **Do the following**, next to **Rights protect message with** select the **Select one** link. 
 
@@ -143,7 +143,7 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 ### Task 3 - Test Office Message Encryption Behavior
 
-In the previous task we created a new Mail flow rule to mark emails with **Secure Message** in the Subject as Highly Confidential. This RMS policy applies Office Message Encryption (OME) with only users in your organization to view the message contents. To determine what types of errors users may encounter when troubleshooting OME issues, we will review what happens when a user does not have permissions to view an email that does not have access to view it in the following task. 
+In the previous task we created a new Mail flow rule to mark emails with **Project Falcon** in the Subject as Highly Confidential. This RMS policy applies Office Message Encryption (OME) with only users in your organization to view the message contents. To determine what types of errors users may encounter when troubleshooting OME issues, we will review what happens when a user does not have permissions to view an email that does not have access to view it in the following task. 
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
@@ -157,9 +157,9 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     - To: Type in your partners admin email address. This email address will be similar to your admin email adress (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly.  
 
-    - Subject: enter **Secure Message**
+    - Subject: enter **Project Falcon**
 
-    - Message Body: Enter **Secure Message**
+    - Message Body: Enter **Project Falcon**
 
     **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc).
 
@@ -167,7 +167,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edgt tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select "release email". This issue may happen as Some tenants may have pre-configured quarentine rules in place.
 
-8. You should recieve an email in your inbox with the subject: **Secure Message** from your partners admin account. 
+8. You should recieve an email in your inbox with the subject: **Project Falcon** from your partners admin account. 
 
     Alternatively, if you are using a personal Microsoft Outlook email account follow the steps below before continuing:
 
@@ -179,7 +179,7 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
     - Sign in using your personal Microsoft Outlook email account details.
 
-    - Navigate to your inbox and confirm you see the email with the subject: **Secure Message**.
+    - Navigate to your inbox and confirm you see the email with the subject: **Project Falcon**.
 
 9. In the message preview, double click the email to open it in a new window. You should notice one of two possible messages displayed:
 
@@ -201,7 +201,12 @@ In the previous task we created a new Mail flow rule to mark emails with **Secur
 
 10. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task. 
 
-    If you are using a per
+    If you are using a personal Microsoft Outlook email account, leave the **InPrivate** Edge Browser open.
+
+
+### Task 4 - Resolve Office Message Encryption Permission issue
+
+
 
 
 
