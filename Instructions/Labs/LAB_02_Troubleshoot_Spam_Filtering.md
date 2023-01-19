@@ -2,15 +2,28 @@
 
 ## Lab scenario
 
-Scenario here
+In the labs for this course, you are taking on the role of Adatum Corporations Messaging Administrator. You have deployed Microsoft 365 in a virtualized lab environment, and you have been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+
+In this lab, you have been tasked with the implementation and testing of a custom spam filtering policy that must contain the following settings:
+- Empty messages: **On**
+- Embedded tags in HTML: **On**
+- JavaScript or VBScript in HTML: **On**
+- SPF record hard fail: **On**
+- Sender ID filtering hard fail: **On**
+
+Once created, you will test the behavior of the policy to ensure it is working as expected and fix any issues should they exist.
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+
+If you do not have a Personal Microsoft Outlook email account, you can sign up for one by navigating to the following the link: **<https://signup.live.com>**.
 
 ## Instructions
 
 ### Task 1 - Create a Spam filtering Policy
+
+In this task, you will use the default global admin to sign into Microsoft 365 Defender and modify the existing default Anti-spam inbound policy to reflect the new policy requirements. 
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -68,7 +81,9 @@ Scenario here
 
 ### Task 2 - Test Anti-spam behavior
 
-**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+In this task, you will be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It is crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the amount of junk email users may receive day to day.
+
+**Note:**  If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc). Instructions to create a personal account are in the **Lab setup** Steps above if needed.
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -90,7 +105,7 @@ Scenario here
 
     When prompted with the message **Missing subject**, select **Send**.
 
-    **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+    **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Rather than logging out of your current Edge browser session, right click the Microsoft Edge icon in the taskbar and select **New InPrivate Window**.
 
 6. After about 10-30 seconds you should notice that an email appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 
@@ -103,6 +118,8 @@ Scenario here
 9. Leave the **Mail - MOD Administrator - Outlook** Tab open in your Edge browser and proceed to the next task.
 
 ### Task 3 - Review Message Headers to Identify Mail Flow Issues
+
+In the prior task, you identified that our test email landed in your junk email folder. In this task, we will review the message headers using the Message Header Analyzer and verify whether or not this behavior was caused by the Anti-spam policy we modified back in task 1.
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Mail - MOD Administrator - Outlook** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -161,6 +178,8 @@ Scenario here
     Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in Edge and proceed to the next task.
 
 ### Task 4 - Review a Message Trace using PowerShell
+
+In this task, you will be running a message trace using PowerShell instead of using the Message trace functionality built into the Exchange Admin Center (EAC). The purpose of this task is to give you exposure to alternative methods of accomplishing day to day tasks an Exchange Administrator may need to perform.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 

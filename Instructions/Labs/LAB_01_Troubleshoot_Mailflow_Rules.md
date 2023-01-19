@@ -2,19 +2,49 @@
 
 ## Lab scenario
 
-Scenario here
+In the labs for this course, you are taking on the role of Adatum Corporations Messaging Administrator. You have deployed Microsoft 365 in a virtualized lab environment, and you have been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+
+A colleague of yours, who shares the same Administrative privileges & access to your pilot, has found during testing that they are receiving Non-Delivery reports (NDR) when sending to specific external tenants. They cannot remember which setting they may have configured to cause this behavior. In this first lab, you will be assisting your fellow administrator in troubleshooting and identifying the potential root cause of these NDR's
 
 ## Lab Setup
 
-Your instructor will provide guidance on how to obtain your Microsoft 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course.
+The labs in this course have been prepared for a Microsoft Exchange deployment at Adatum Corporation. Adatum is running a Microsoft 365 cloud-only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Exchange in a Microsoft 365 deployment. You will be provided with one virtual machines and a Microsoft 365 tenant to complete the lab steps.
 
-In your lab environment, your lab hosting provider has already:
+### Sign in to the lab virtual machines
 
-- Deployed the trial tenant
-- Created a default tenant administrator account (known as the MOD Administrator)
-- Created 9 additional user accounts
+The labs in this course will use two virtual machines:
 
-In order to configure Lab 1:
+- **LON-CL1:** A stand-alone Windows 11 client virtual machine with Microsoft 365 suite of apps pre-installed.
+
+**Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
+
+**Important:** The exercises in the MS-220 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in on **LON-CL1**
+
+### Review installed applications
+
+Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
+
+- Microsoft Outlook
+
+### Review Microsoft 365 tenant
+
+Besides the single VM, you will also be provided with a Microsoft 365 tenant with the following highlights:
+
+- Office 365 E5 with Enterprise Mobility + Security E5.
+
+- 15 licenses in total with 5 available of 15 (10 used).
+
+- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
+
+- **Note:** Microsoft 365 sign-in instructions will be provided to you by your instructor.
+
+- The username of the Global Administrator (MOD Administrator) is **admin@xxxxxZZZZZZ.onmicrosoft.com**.
+
+- **xxxxxZZZZZZ.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (xxxxxZZZZZZ) is the unique tenant ID provided by the lab hosting provider. The **xxxxxZZZZZZ** portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
+
+    **IMPORTANT:** The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
+
+### Configure Lab 1
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -38,7 +68,7 @@ In order to configure Lab 1:
 
 ### Task 1 - Review a Non-Delivery Report Message
 
-insert task intro here
+In this task, you will use the default global admin to sign in to the Outlook for the web and review the Non-Delivery Report (NDR) identified by your administrator colleague. This task is a crucial first step in identifying any mail flow related issues as NDR's typically have verbose error messages and can influence your initial troubleshooting approach.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
@@ -69,6 +99,8 @@ insert task intro here
 10. Take a few minutes reviewing the NDR in its entirety before proceeding to the next task.
 
 ### Task 2 - Analyze a Message Trace
+
+In this task, you will use the default global admin to sign in to the Exchange Admin Center (EAC) and initiate your first troubleshooting task of a performing a message trace and analyzing the results. Performing messages traces is a crucial task performed by Exchange Administrators to ensure mail flow is operational.  
 
 1. You should still be logged into **LON-CL1** from the prior task with Outlook Web Mail still open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -134,6 +166,8 @@ insert task intro here
 
 ### Task 3 - Review Transport Rules
 
+In previous tasks you identified that a mail flow was blocking these messages during transport. In this task you will review the configuration settings for this rule using the Exchange PowerShell Module. You will then modify potential configuration issues using the Exchange Admin Center (EAC). Both PowerShell and The (EAC) can be used to perform both tasks, however the goal is to expose you to both options as an administrator will use them routinely to perform day to day tasks.
+
 1. You should still be logged into **LON-CL1** from the prior task; if necessary, log back in as the **Administrator** with a password of **Pa55w.rd**.
 
 2. Once logged into **LON-CL1**, open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
@@ -178,7 +212,7 @@ insert task intro here
 
     Close the PowerShell window and then select the **Microsoft Edge** icon on the taskbar. The **EAC** should open up to the **Message trace search results** page.
 
-    If you exited out of Edge, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
+    If you exited out of Edge previously, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
 
     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
 
