@@ -1,6 +1,10 @@
-# Lab 1 - Lab Introduction and setup
+# Lab 1 - Troubleshoot Mail Flow
 
-**insert body here**
+## Lab scenario
+
+Scenario here
+
+## Lab Setup
 
 Your instructor will provide guidance on how to obtain your Microsoft 365 credentials in your lab-hosted environment. You will use these credentials throughout the remaining labs in this course.
 
@@ -26,15 +30,15 @@ In order to configure Lab 1:
 
 4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed to **Exercise 1, Task 1**
 
-    **Note:** It could take the full 5 minute time-frame for the lab setup process to complete.
+    **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
 
-## Exercise 1 - Troubleshoot Mail Flow
+    **Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
-**Insert exc. intro here**
+## Instructions
 
 ### Task 1 - Review a Non-Delivery Report Message
 
-**insert task intro here**
+insert task intro here
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
@@ -65,8 +69,6 @@ In order to configure Lab 1:
 10. Take a few minutes reviewing the NDR in its entirety before proceeding to the next task.
 
 ### Task 2 - Analyze a Message Trace
-
-**Task 2 intro here**
 
 1. You should still be logged into **LON-CL1** from the prior task with Outlook Web Mail still open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -131,8 +133,6 @@ In order to configure Lab 1:
 18. Select the **X** in the **This a Test Email** pane to exit the message trace details - you can leave the **EAC** open for now. Then proceed to Task 3.
 
 ### Task 3 - Review Transport Rules
-
-**Task 3 intro here**
 
 1. You should still be logged into **LON-CL1** from the prior task; if necessary, log back in as the **Administrator** with a password of **Pa55w.rd**.
 

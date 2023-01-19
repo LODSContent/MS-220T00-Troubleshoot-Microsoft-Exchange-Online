@@ -1,10 +1,16 @@
 # Lab 2 - Troubleshoot Spam Filtering
 
-**Lab 1 ex 2 intro** (test scenario where we create a policy and want to test the behavior??)
+## Lab scenario
+
+Scenario here
+
+## Lab Setup
+
+**Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+
+## Instructions
 
 ### Task 1 - Create a Spam filtering Policy
-
-**Task intro**
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to log in. Log into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -29,7 +35,7 @@
 
 9. In the **Spam threshold and properties** pane that appears, the **Bulk email threshold** at the top of the pane is set to **7** by default. Drag the slider to the left on the slider bar and change this value to **5.**
 
-5. Under the **Mark as spam** section, update the following settings:
+10. Under the **Mark as spam** section, update the following settings:
 
     - Empty messages: **On**
 
@@ -56,31 +62,29 @@
 
       Enter a letter and then select a country with the letter in it that you want to filter. Repeat this step for a couple of countries.
 
-6. Leave all other settings as default, and the select **Save**.
+11. Leave all other settings as default, and the select **Save**.
 
-7. Select **Close** to close the **Anti-spam inbound policy (Default)** pane and proceed to the next task.
+12. Select **Close** to close the **Anti-spam inbound policy (Default)** pane and proceed to the next task.
 
 ### Task 2 - Test Anti-spam behavior
 
-**Task intro** 
-
-**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+**Note:** in this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. You will now navigate to **Outlook on the Web**. On the **Anti-spam policies** page, select the **App Launcher** on the top left-hand corner of the screen and under the **Apps** header select the **Outlook** icon.
 
-3. You should now be back into the your **MOD Administrators** mailbox. 
+3. You should now be back into the your **MOD Administrators** mailbox.
 
     In the upper left-hand corner, select **New mail**.
 
 4. In the message pane that appears on the right-side of the screen, enter the following information:
 
-    - To: type in your partners admin email address. this email address will be similar to your admin email adress (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly. 
+    - To: type in your partners admin email address. this email address will be similar to your admin email address (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly.
 
     - Subject: leave blank
 
-    - Message Body: Leave blank 
+    - Message Body: Leave blank
 
 5. Select **Send**.
 
@@ -88,19 +92,17 @@
 
     **IMPORTANT:** if you do not have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
 
-6. After about 10-30 seconds you should notice that an emai appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
+6. After about 10-30 seconds you should notice that an email appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 
 7. The message in the **Junk Email** folder should be from your partners **MOD Administrator** account (or your personal Microsoft Outlook email account if you did not have a student to partner up with). Select the message to open the message preview.
 
 8. Take a moment to review the contents of the message and the Mail-Tip warning displayed below **(No subject)**.
 
-    The following Mail-Tip should be displayed: **This message was identified as junk. We'll delete it after 30 days**. 
+    The following Mail-Tip should be displayed: **This message was identified as junk. We'll delete it after 30 days**.
 
 9. Leave the **Mail - MOD Administrator - Outlook** Tab open in your Edge browser and proceed to the next task.
 
 ### Task 3 - Review Message Headers to Identify Mail Flow Issues
-
-**lab intro here**
 
 1. You should still be logged into **LON-CL1** from the prior task with the **Mail - MOD Administrator - Outlook** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
@@ -108,7 +110,7 @@
 
     The Email received from the prior task should still be the **Junk Email** Folder.
 
-3. Right-Click anyware on the message preview and then select **View**. On the menue that appears, select **View message details**.
+3. Right-Click anywhere on the message preview and then select **View**. On the menu that appears, select **View message details**.
 
 4. In the **Message details** pop-up that appears, select all the text (Ctrl-A) from the message header and then copy it to your clipboard (Ctrl-C). Select **Close** once the contents have been fully copied.
 
@@ -120,13 +122,13 @@
 
 7. Take a moment and review the all the fields that are populated. There are Four sections to review – **Summary**, **Forefront Antispam Report Header**, **Microsoft Antispam Header** and **Other headers**.
 
-8. Once you have finished reviewing the message header youself, find the **Forefront Antispam Report Header** and expand it. 
+8. Once you have finished reviewing the message header yourself, find the **Forefront Antispam Report Header** and expand it.
 
     To the right of **Spam Confidence Level** select **9**. This should open up a new tab in Edge labeled **Antispam Stamps**.
 
     This Article reviews the various anti spam stamps added to a message, but we want to focus on the **Spam Confidence Level** (SCL):
 
-    0 indicates an extremely low probability that the message is spam, while 9 indicates an extremely high probability that the message is spam. 
+    0 indicates an extremely low probability that the message is spam, while 9 indicates an extremely high probability that the message is spam.
 
     As the message header indicates our message has an SCL of 9, we will want to dig further to determine why it was stamped this way.
 
@@ -136,11 +138,11 @@
 
     This is a great article to keep favorited to help decipher the various **Anti-spam** message headers. If we the find functionality (Ctrl-F) to find the term **HSPM** we can see that the category of protection policy applied to the message was **High confidence spam**.
 
-    Take a few minutes to review the rest of the fields mentioned under **X-Forefront-Antispam-Report message header fields** to see if one might help us determine why this email was marked as spam and moved to the junk folder. 
+    Take a few minutes to review the rest of the fields mentioned under **X-Forefront-Antispam-Report message header fields** to see if one might help us determine why this email was marked as spam and moved to the junk folder.
 
     Once you have finished reviewing all the fields, close out of the **Anti-spam Message headers in Microsoft 365** tab in Edge and navigate back to the **Message header analyzer** tab.
 
-10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, thats correct! In task 1 of this lab, we modified the default anti-spam inboud policy to enable the following settings:
+10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, thats correct! In task 1 of this lab, we modified the default anti-spam inbound policy to enable the following settings:
 
     - <mark> Empty messages: **On** </mark>
 
@@ -152,15 +154,13 @@
 
     - Sender ID filtering hard fail: **On**
 
-    Because the message you sent your partner (or youself using a personal account) contained no subject or message body, it was considered an **Empty message** and therefor labled as spam and moved to the Junk Email Folder. 
+    Because the message you sent your partner (or yourself using a personal account) contained no subject or message body, it was considered an **Empty message** and therefor labeled as spam and moved to the Junk Email Folder.
 
 11. To get ready for the next task, on the **Message header analyzer** Tab, scroll up to the top of the page and expand **Summary**. Copy (Ctrl-c) the **Message Id** without **<** or **>**.
 
     Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in Edge and proceed to the next task.
 
 ### Task 4 - Review a Message Trace using PowerShell
-
-**Task Intro**
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows log-in page appears, then log in now.
 
@@ -192,7 +192,7 @@
 
     - Message Trace ID
 
-    - Recieved date / time
+    - Received date / time
 
     - Sender Address
 
@@ -200,12 +200,12 @@
 
     - Message Status
 
-    This may be enough details for some to determine minor mailflow issues, however we can take it a step further using the **Get-MessageTraceDetail** Exchange Online Command-let (CMDLET).
+    This may be enough details for some to determine minor mail flow issues, however we can take it a step further using the **Get-MessageTraceDetail** Exchange Online Command-let (CMDLET).
 
 10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press Enter:
 
       `$MessageTraceId = $MessageTrace.MessageTraceId`
-    
+
 11. At the command prompt, type the following command and press Enter:
 
       `$RecipientAddress = $MessageTrace.RecipientAddress`
@@ -214,13 +214,10 @@
 
       `Get-MessageTraceDetail -MessageTraceId $MessageTraceId -RecipientAddress $RecipientAddress | FL`
 
-13. Take a minute to review the entire output for the **Get-MessageTraceDetail** CMDLET. 
+13. Take a minute to review the entire output for the **Get-MessageTraceDetail** CMDLET.
 
-    Notice that using this CMDLET shows all of the message event details rather than just the the final message trace results. 
+    Notice that using this CMDLET shows all of the message event details rather than just the the final message trace results.
 
-    Running both the **Get-MessageTrace** and **Get-MessageTraceDetails** together is good practice when initially reviewing mail flow issues in your enviornment. 
+    Running both the **Get-MessageTrace** and **Get-MessageTraceDetails** together is good practice when initially reviewing mail flow issues in your environment.
 
 ## End of lab 2
-
-
-

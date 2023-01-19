@@ -1,10 +1,14 @@
 # Lab 4 – Investigate Message Security
 
-**Lab 2 ex 2 intro**
+## Lab scenario
 
+Scenario here
+
+## Lab Setup
 
 **Note:** In this lab exercise, you will partner with another student to exchange emails with. If you do not have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
 
+## Instructions
 
 ### Task 1 - Create a Sensitivity Label
 
@@ -20,17 +24,17 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
 5. In the **Microsoft Purview** compliance portal, on the left-hand navigation pane, select **Information Protection**.
 
-6. On the **Information protection** page that is displayed, select the **Lables** tab from the menue.
+6. On the **Information protection** page that is displayed, select the **Labels** tab from the menu.
 
-7. On the **Lables** page, select **+ Create a label**.
+7. On the **Labels** page, select **+ Create a label**.
 
-8. A **New Sensitivity Label** page should be displayed. Under **Name and create a tooltop for your label** enter the following information:
+8. A **New Sensitivity Label** page should be displayed. Under **Name and create a tooltip for your label** enter the following information:
 
     - Name: enter **Highly Confidential - Project Falcon**
 
     - Display Name: enter **Highly Confidential - Project Falcon**
 
-    - Description for users: enter **Confidetial - Data is classified and protected**
+    - Description for users: enter **Confidential - Data is classified and protected**
 
     - Description for admins: leave blank
 
@@ -38,7 +42,7 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
 9. On the **Define the scope for this label** page, leave the default settings enabled and select **Next**.
 
-10. On the **Choose proection settings for labeled items** page, enable **Apply or remove encryption** and then select **Next**.
+10. On the **Choose protection settings for labeled items** page, enable **Apply or remove encryption** and then select **Next**.
 
 11. On the **Encryption** Page, with **Configure encryption settings** enabled, select the following options:
 
@@ -56,31 +60,31 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
     When finished, select **Save** and then select **Next**.
 
-13. On the **Auto-labeling for filed and emails**, leave the default setting (disabled) and select **Next**. 
+13. On the **Auto-labeling for filed and emails**, leave the default setting (disabled) and select **Next**.
 
 14. On the **Define protection settings for groups and sites** page, leave the options disabled (Unchecked) and select **Next**.
 
-15. On the **Auto-labeling for schematized data assetss (preview)** page, leave the default setting (disabled) and select **Next**.
+15. On the **Auto-labeling for schematized data assets (preview)** page, leave the default setting (disabled) and select **Next**.
 
-16. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link uder the setting name. When finished reviewing the settings, select **Create label**.
+16. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link under the setting name. When finished reviewing the settings, select **Create label**.
 
     When prompted **Your sensitivity label was created**, select **Don't create a policy yet** and then select **Done**.
 
-17. You should now be back on the **Information protection** page with the **Labels** tab selected. To assign the label we just created to a policy, select the **Label policies** tab from the menu. 
+17. You should now be back on the **Information protection** page with the **Labels** tab selected. To assign the label we just created to a policy, select the **Label policies** tab from the menu.
 
 18. Under the **Label policies** tab, select **Global sensitivity label policy**.
 
 19. On the new **Global sensitivity label policy** page that appears on the right-hand side of the window, select **Edit policy**.
 
-20. A **Choose sensitivy labels to publish** page should be displayed. Under **Sensitivity labels to publish**, select the **Edit** link.
+20. A **Choose sensitivity labels to publish** page should be displayed. Under **Sensitivity labels to publish**, select the **Edit** link.
 
-21. on the **Sensitivity labels to publish** page that appears, scroll down to the bottum and enable (Check) **Project Falcon** and then select **Add**.
+21. on the **Sensitivity labels to publish** page that appears, scroll down to the bottom and enable (Check) **Project Falcon** and then select **Add**.
 
-22. Select **Next** on all proceeding pages until you reach **Review and finish** and then select **Submit**. 
+22. Select **Next** on all proceeding pages until you reach **Review and finish** and then select **Submit**.
 
-    **Note:** If you recieve a **Client Error** warning stating **AddExchangeLocation and RemoveExchangeLocation parameters have same Location(s)**, select **OK** and follow the below steps. 
-        
-    - On the **Review and finish** under **Publish to users and groups*, select **Edit**. 
+    **Note:** If you receive a **Client Error** warning stating **AddExchangeLocation and RemoveExchangeLocation parameters have same Location(s)**, select **OK** and follow the below steps.
+
+    - On the **Review and finish** under **Publish to users and groups*, select **Edit**.
 
     - On the **Publish to users and groups** page, select the **Choose user or group** link.
 
@@ -92,7 +96,7 @@ To utilize time more effectively, we are first going to create a new sensitivity
 
 24. Leave the **Information protection - Microsoft Purview** tab open in Edge and proceed to the next task.
 
-### Task 2 - Configure a Mail Flow Rule to Apply Office Message Encryption 
+### Task 2 - Configure a Mail Flow Rule to Apply Office Message Encryption
 
 We have been tasked to test the behavior of implementing a new Mail flow rule to encrypt emails when "Top secret" is in the subject field.
 
@@ -106,35 +110,35 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 5. In the **New Transport rule** wizard that appears, under **Set rule conditions** enter **Project Falcon** in the **Name** field.
 
-7. In the **Apply this rule if** drop down menu, select **The subject or body**.
+6. In the **Apply this rule if** drop down menu, select **The subject or body**.
 
      A new drop down menu will be displayed on the right. From this drop down, select **Subject or body includes any of these words.**
 
-8. In the **specify words or phrases** window that appears, enter **Project Falcon** in the text field and then select **Add**.
+7. In the **specify words or phrases** window that appears, enter **Project Falcon** in the text field and then select **Add**.
 
-9. The word **Project Falcon** should be displayed below the text field. Once completed, select **Save**.
+8. The word **Project Falcon** should be displayed below the text field. Once completed, select **Save**.
 
-10. This brings you back to the **Set rule conditions** page. Under **Do the following**, next to **Rights protect message with** select the **Select one** link. 
+9. This brings you back to the **Set rule conditions** page. Under **Do the following**, next to **Rights protect message with** select the **Select one** link.
 
-11. In the **Select RMS template** window that appears, select **Project Falcon** From the drop down menu and then select **Save**.
+10. In the **Select RMS template** window that appears, select **Project Falcon** From the drop down menu and then select **Save**.
 
-12. Back on the **Set rule conditions** page, leave the **Except if** condition as the default setting, and then select **Next.**
+11. Back on the **Set rule conditions** page, leave the **Except if** condition as the default setting, and then select **Next.**
 
-13. In the **Set rule settings** window that appears, ensure **Rule mode** is set to **enforce**.
+12. In the **Set rule settings** window that appears, ensure **Rule mode** is set to **enforce**.
 
     Leave all other settings as default and then select **Next**.
 
-14. In the **Review and finish** page, Verify the rule conditions and settings are correct. If corrections are needed, select **Edit rule conditions** or **Edit rule settings** and make the necessary corrections. Once you have verified the conditions and rules are correct, select **Finish**.
+13. In the **Review and finish** page, Verify the rule conditions and settings are correct. If corrections are needed, select **Edit rule conditions** or **Edit rule settings** and make the necessary corrections. Once you have verified the conditions and rules are correct, select **Finish**.
 
     It may take up to a minute to create the rule. Once **Transport rule created successfully** is displayed, select **Done**.
 
-15. You will now be brought back to the **Rules** page. Notice the rule **Sensitive material** shows a status of **Disabled**.
+14. You will now be brought back to the **Rules** page. Notice the rule **Sensitive material** shows a status of **Disabled**.
 
     Select the word **Disabled** which will open up a new window for the **Sensitive material** rule settings. Under **Enable or disable rule** select the slider button so that it shows **Enabled** and then close the window by selecting **X** in the upper right hand corner.
 
     **Note:** After enabling the rule, it may take up to a minute for the rule to refresh and display as enabled.
 
-16. Leave the **Exchange Admin Center** open to the **rules** tab on the **mail flow** page and proceed to the next task.
+15. Leave the **Exchange Admin Center** open to the **rules** tab on the **mail flow** page and proceed to the next task.
 
 ### Task 3 - Test Office Message Encryption Behavior
 
@@ -150,24 +154,24 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
 4. In the message pane that appears on the right-side of the screen, enter the following information:
 
-    - To: Type in your partners admin email address. This email address will be similar to your admin email adress (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly.  
+    - To: Type in your partners admin email address. This email address will be similar to your admin email address (**admin@xxxxxZZZZZZ.onmicrosoft.com**) but differ slightly.  
 
     - Subject: enter **Project Falcon**
 
     - Message Body: Enter **Project Falcon Update**
 
-    **Note:** If dont have a partner, in the "To:" line, enter your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc).
+    **Note:** If don't have a partner, in the "To:" line, enter your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc).
 
-7. Select **Send**.
+5. Select **Send**.
 
-    **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edge tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select **release email**. This issue may happen as some tenants may have pre-configured quarentine rules in place.
+    **Note:** If the email does not arrive inside of your partners / personal inbox, open a new Edge tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select **release email**. This issue may happen as some tenants may have pre-configured quarantine rules in place.
 
-8. You should recieve an email in your inbox with the subject: **Project Falcon** from your partners admin account. 
+6. You should receive an email in your inbox with the subject: **Project Falcon** from your partners admin account.
 
     Alternatively, if you are using a personal Microsoft Outlook email account follow the steps below before continuing:
 
     - Minimize your open Edge browser.
-    
+
     - In the Task bar, right click **Microsoft Edge** and select **New InPrivate Window**.
 
     - Navigate to the following URL: **<https://outlook.office.com/mail/>**
@@ -176,7 +180,7 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
     - Navigate to your inbox and confirm you see the email with the subject: **Project Falcon**.
 
-9. In the message preview, double click the email to open it in a new window. You should notice one of two possible messages displayed:
+7. In the message preview, double click the email to open it in a new window. You should notice one of two possible messages displayed:
 
     **Message 1** - You will see the OME wrapper container:
 
@@ -192,12 +196,11 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
     **Note:** In some other scenarios there is a 3rd possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
 
-    No matter how the message is displayed to you / how you open the message, if you dont have the correct permissions you will be unable to view the message body. This is because your organization / personal Microsoft Outlook email account was not granted the correct permissions to view these internal encrypted emails. In the real world, if you recieve one of these permission related errors when opening up an encrypted message, it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied. 
+    No matter how the message is displayed to you / how you open the message, if you don't have the correct permissions you will be unable to view the message body. This is because your organization / personal Microsoft Outlook email account was not granted the correct permissions to view these internal encrypted emails. In the real world, if you receive one of these permission related errors when opening up an encrypted message, it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied.
 
-10. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task. 
+8. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task.
 
     If you are using a personal Microsoft Outlook email account, leave the **InPrivate** Edge Browser open.
-
 
 ### Task 4 - Resolve Office Message Encryption Permission issue
 
@@ -211,13 +214,13 @@ You will now identify and resolve the issue with the mail flow rule created.
 
 3. In the **Microsoft Purview** compliance portal, on the left-hand navigation pane, select **Information Protection**.
 
-4. On the **Information protection** page that is displayed, select the **Lables** tab from the menue.
+4. On the **Information protection** page that is displayed, select the **Labels** tab from the menu.
 
 5. In the List of Labels that appear, select **Project Falcon**.
 
 6. In the **Project Falcon** details pane that appears on the right, select **Edit label**.
 
-7. The **Edit Sensitivity Label** page should be displayed. 
+7. The **Edit Sensitivity Label** page should be displayed.
 
     With a partner, or on your own, take a few minutes review the sensitivity labels configuration and attempt to identify the configuration change needed to allow external partners to view encrypted emails sent with the **Project Falcon** label added.
 
@@ -229,7 +232,7 @@ You will now identify and resolve the issue with the mail flow rule created.
 
 10. On the **Assign permissions** pane that open on the right, we see four options:
 
-    - **Add all users and groups in your organization** 
+    - **Add all users and groups in your organization**
 
     - **Add any authenticated users**
 
@@ -239,17 +242,17 @@ You will now identify and resolve the issue with the mail flow rule created.
 
     because we want to add specific partner email accounts, we would choose the last option, **Add specific email addresses or domains**.
 
-11. After selecting **Add specific email addresses or domains** a text box should appear displaying **Enter email address or domain**. 
+11. After selecting **Add specific email addresses or domains** a text box should appear displaying **Enter email address or domain**.
 
     Enter your partners admin account email address (Your partners admin email tenant prefix should look similar to yours **@xxxxxZZZZZZ.onmicrosoft.com**) then select **Add**.
 
-    **Note:** If you do not have a partner, instead type in your personal Microsoft Outlook email accoount (@Outlook.com, @live.com, @hotmail.com, etc) that you used earlier in Task 3.
+    **Note:** If you do not have a partner, instead type in your personal Microsoft Outlook email account (@Outlook.com, @live.com, @hotmail.com, etc) that you used earlier in Task 3.
 
-12. Once finished adding the correct emaill address, you should see it displayed under the **Enter email address or domain** text box. Once finished select **Save**.
+12. Once finished adding the correct email address, you should see it displayed under the **Enter email address or domain** text box. Once finished select **Save**.
 
-13. Back on the **Edit sensitivit label** window, select **Next** until you get to **Review your settings and finish**.
+13. Back on the **Edit sensitivity label** window, select **Next** until you get to **Review your settings and finish**.
 
-14. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link uder the setting name. When finished reviewing the settings, select **Save label**.
+14. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link under the setting name. When finished reviewing the settings, select **Save label**.
 
     When prompted **Label updates**, select **Done**.
 
@@ -257,7 +260,7 @@ You will now identify and resolve the issue with the mail flow rule created.
 
 16. To test the modified label behavior, repeat steps 2 through 8 in Task 3 of this lab.
 
-17. Select the email you just recieved to review the message body.
+17. Select the email you just received to review the message body.
 
     **Note:** the email may be in your **Junk Email** Folder.
 
@@ -266,12 +269,3 @@ You will now identify and resolve the issue with the mail flow rule created.
     ![Screenshot of Office Message Encryption Message](/Images/OME_Working.png)
 
 ## End of lab 4
-
-
-
-
-
-
-
-
-
