@@ -188,7 +188,7 @@ In this task, you'll use the default global admin to sign in to the Exchange Adm
 
 ### Task 3 - Review Transport Rules
 
-In previous tasks you identified that a mail flow was blocking these messages during transport. In this task you'll review the configuration settings for this rule using the Exchange PowerShell Module. You'll then modify potential configuration issues using the Exchange Admin Center (EAC). Both PowerShell and The (EAC) can be used to perform both tasks, however the goal is to expose you to both options as an administrator will use them routinely to perform day to day tasks.
+In previous tasks you identified that a mail flow was blocking messages during transport. In this task you'll review the configuration settings for this rule using the Exchange PowerShell Module. You'll then modify potential configuration issues using the Exchange Admin Center (EAC). Both PowerShell and The (EAC) can be used to perform both tasks, however the goal is to expose you to both options as an administrator will use them routinely to perform day to day tasks.
 
 1. You should still be logged into **LON-CL1** from the prior task; if necessary, log back in as the **Administrator** with a password of **Pa55w.rd**.
 

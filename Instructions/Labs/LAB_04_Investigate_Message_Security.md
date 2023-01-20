@@ -126,7 +126,7 @@ In this lab task, you will create a Sensitivity label named "Highly Confidential
 
 ### Task 2 - Configure a Mail Flow Rule to Apply Office Message Encryption
 
-In this task, you will be testing the behavior of implementing a new Mail flow rule to encrypt emails when "Project Falcon" is written in the subject field or body of a email. Using Mail Flow rules to automatically apply Encryption can help keep your organization secure in the event a user forgets to stamp their email correctly.
+In this task, you will be implementing a new Mail flow rule to encrypt emails when "Project Falcon" is written in the subject field or body of a email. Using Mail Flow rules to automatically apply Encryption can help keep your organization secure in the event a user forgets to stamp their email correctly.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -232,7 +232,7 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
 ### Task 4 - Resolve Office Message Encryption Permission issue
 
-In the previous task, we identified an issue where our external partners were receiving permission related issues when attempting to open Project Falcon encrypted emails. In this lab task, you will review the configuration settings in the "Project Falcon** Sensitivity label and modify the settings in order to allow our partners to view these emails.
+In the previous task, we identified an issue where our external partners were receiving permission related issues when attempting to open Project Falcon encrypted emails. In this lab task, you will review the configuration settings in the "Project Falcon" Sensitivity label and modify the settings in order to allow these partners to view the emails.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 

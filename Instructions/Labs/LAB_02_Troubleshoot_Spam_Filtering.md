@@ -4,7 +4,7 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you will be implementing and testing a custom spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
+In this lab, you will be implementing and configuring spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
 
 - Empty messages: **On**
 - Embedded tags in HTML: **On**
@@ -95,7 +95,7 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
 ### Task 2 - Test Anti-spam behavior
 
-In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It's crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the number of junk email users may receive day to day.
+In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It's crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the number of junk email that users may receive day to day.
 
 **Note:**  If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc.). Instructions to create a personal account are in the **Lab setup** Steps above if needed.
 
