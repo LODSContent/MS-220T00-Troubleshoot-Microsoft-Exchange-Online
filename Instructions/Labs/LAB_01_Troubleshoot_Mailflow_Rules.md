@@ -4,7 +4,11 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various Microsoft 365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-A colleague of yours, who shares the same Administrative privileges & access to your pilot, has found during testing that they're receiving Non-Delivery reports (NDR) when sending to specific external tenants. They can't remember which setting they may have configured to cause this behavior. In this first lab, you'll be assisting your fellow administrator in troubleshooting and identifying the potential root cause of these NDRs
+In this lab, you will be troubleshooting and identifying the potential root cause of Non-Delivery Reports (NDRs) that have been encountered during testing by one of your colleagues who shares the same administrative privileges and access as you. Your colleague has reported that they are experiencing NDRs when sending to specific external tenants, but they cannot remember which setting they may have configured to cause this behavior.
+
+In this lab, you will be assisting your colleague in troubleshooting the issue by reviewing the settings and configurations related to email delivery. You will be working with the Microsoft 365 admin center and Exchange admin center to identify any potential issues with the email routing and transport rules that may be causing the NDRs. By the end of the lab, you will have a better understanding of how to troubleshoot and identify the root cause of NDRs.
+
+By understanding the different components that can cause NDRs, you will be better equipped to quickly identify and resolve any similar issues that may arise in the future. This will help to ensure that email communication remains reliable and efficient within your organization.
 
 ## Lab Setup
 
@@ -58,11 +62,29 @@ Besides the single VM, you'll also be provided with a Microsoft 365 tenant with 
 
     **Important:** The **Lab 1 setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Click **Ok**, close the Microsoft Sign-on window, and repeat step 2.
 
-4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed to **Exercise 1, Task 1**
+4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
     **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
 
-    **Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+### Personal Email Account Setup
+
+In this lab, you'll be partnering with another student to exchange emails with. However, If you don't have a partner, or are following the self-paced version of this course, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+
+If you don't have a Personal Microsoft Outlook email account, you can follow the steps below to configure one:
+
+1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
+2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
+3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
+4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+
+    **Important**: Before selecting **Next**, please be sure to review both the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement/default.aspx?azure-portal=true) and [Privacy and cookies statement](https://go.microsoft.com/fwlink/?LinkID=521839). By selecting **Next**, you choose to agree to Microsoft's service agreement.
+
+5. On the **What's your name?** window, enter your full name (or if you'd prefer, fictitious information), and then select **Next**.
+6. On the **What's your birthdate?** window, choose your **Country/region** and enter a **Birthdate**, then select **Next**.
+7. On the **Create account** window, select **Next** and solve the generated puzzle.
+8. On the **Stay signed in?** page, select **Yes**.
+9. In a new **Microsoft Edge** tab, navigate to the URL: **<https://outlook.live.com/mail/>**.
+10. Confirm you are able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
 
 ## Instructions
 

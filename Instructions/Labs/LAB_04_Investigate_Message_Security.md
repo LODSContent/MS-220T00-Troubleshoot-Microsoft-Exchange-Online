@@ -2,11 +2,31 @@
 
 ## Lab scenario
 
-Scenario here
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+
+
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+### Personal Email Account Setup
+
+In this lab, you'll be partnering with another student to exchange emails with. However, If you don't have a partner, or are following the self-paced version of this course, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+
+If you don't have a Personal Microsoft Outlook email account, you can follow the steps below to configure one:
+
+1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
+2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
+3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
+4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+
+    **Important**: Before selecting **Next**, please be sure to review both the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement/default.aspx?azure-portal=true) and [Privacy and cookies statement](https://go.microsoft.com/fwlink/?LinkID=521839). By selecting **Next**, you choose to agree to Microsoft's service agreement.
+
+5. On the **What's your name?** window, enter your full name (or if you'd prefer, fictitious information), and then select **Next**.
+6. On the **What's your birthdate?** window, choose your **Country/region** and enter a **Birthdate**, then select **Next**.
+7. On the **Create account** window, select **Next** and solve the generated puzzle.
+8. On the **Stay signed in?** page, select **Yes**.
+9. In a new **Microsoft Edge** tab, navigate to the URL: **<https://outlook.live.com/mail/>**.
+10. Confirm you are able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
 
 ## Instructions
 

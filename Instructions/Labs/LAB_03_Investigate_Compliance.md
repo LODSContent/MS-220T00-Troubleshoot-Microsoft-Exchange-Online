@@ -1,18 +1,62 @@
-# Lab 3 – Perform a Compliance Search
+# Lab 3 – Investigate and Diagnose Problems With Compliance
 
 ## Lab scenario
 
-Scenario here
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+
+In this lab, you will be testing the eDiscovery feature within Exchange Online for email data. You will be creating an eDiscovery (Standard) case and case hold in Exchange Online to manage the search, preservation, and export of email data relevant to a legal matter. A case hold is used to preserve relevant email data to prevent it from being deleted or modified.
+
+You will also be reviewing the permissions and access requirements for eDiscovery case management in Exchange Online. This will include understanding who has the ability to create, manage, and delete eDiscovery cases for email data, and what level of access different users have to the email data within the cases.
+
+Lastly, you will be creating a content search for targeted email collections. This will involve specifying the criteria for the search and selecting specific email sources to be searched. By the end of the lab, you will have a better understanding of how to use the eDiscovery feature to search and preserve relevant email data in Exchange Online.
+
+The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there is a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data. The ability to place a case hold on specific data can also be useful in preserving relevant information during an investigation.
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+### Configure Lab 2
+
+1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
+
+2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 2**. In the **Lab 2** subfolder a .bat file named **Lab2setup.bat** should exist.
+
+    Right-click **Lab2setup.bat** and then select **Run as administrator** to start the lab setup process.
+
+    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab 2 setup** window will appear on the screen.
+
+3. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+
+    **Important:** The **Lab 2 setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat step 2.
+
+4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+
+    **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
+
+### Personal Email Account Setup
+
+In this lab, you'll be partnering with another student to exchange emails with. However, If you don't have a partner, or are following the self-paced version of this course, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider).
+
+If you don't have a Personal Microsoft Outlook email account, you can follow the steps below to configure one:
+
+1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
+2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
+3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
+4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+
+    **Important**: Before selecting **Next**, please be sure to review both the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement/default.aspx?azure-portal=true) and [Privacy and cookies statement](https://go.microsoft.com/fwlink/?LinkID=521839). By selecting **Next**, you choose to agree to Microsoft's service agreement.
+
+5. On the **What's your name?** window, enter your full name (or if you'd prefer, fictitious information), and then select **Next**.
+6. On the **What's your birthdate?** window, choose your **Country/region** and enter a **Birthdate**, then select **Next**.
+7. On the **Create account** window, select **Next** and solve the generated puzzle.
+8. On the **Stay signed in?** page, select **Yes**.
+9. In a new **Microsoft Edge** tab, navigate to the URL: **<https://outlook.live.com/mail/>**.
+10. Confirm you are able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
 
 ## Instructions
 
 ### Task 1 - Create an eDiscovery (Standard) Case
 
-In this task, you'll create an eDiscovery (Standard) case that searches for confidential information being disseminated through email.
+In this task, you will be utilizing Microsoft 365 tools such as Exchange admin center, Outlook, and Microsoft Purview. The main focus of the lab is to create an eDiscovery case and hold, and understand the process of searching and preserving specific email data. The lab will provide an understanding of how to use these tools to manage and preserve email data for legal or compliance purposes.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -134,6 +178,8 @@ Once all settings are correct, select **Submit**.
 
 ### Task 2 - Review eDiscovery Permissions
 
+In this task, you will be utilizing Microsoft 365 tools such as Exchange admin center, and Microsoft Purview, with a focus on understanding how to manage and preserve email data for legal or compliance purposes. This task includes steps for managing permissions, editing roles, and reviewing eDiscovery cases and samples in Microsoft 365 Defender and Microsoft Purview. It also covers how to navigate an eDiscovery case and case hold in Microsoft 365 and how to search for and preserve specific email data.
+
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
 2. The **Microsoft Edge** browser should still have the **AlexWilber-Case01 - Microsoft Purview** tab open. We'll start by first signing out of the **MOD Administrator** account and logging into your organizations eDiscovery case administrators account, **Nestor Wilke**.
@@ -192,7 +238,7 @@ Once all settings are correct, select **Submit**.
 
 ### Task 3 - Run a Content Search
 
-Intro about targeted collections here and how we'll now be deleting the Confidential email sent earlier by Allan Deyoung
+In this task, we will outline the process for connecting to and utilizing the Exchange Online Management Module via PowerShell in order to run a compliance search, specifically utilizing targeted collections. A targeted collection search can be used to identify specific items within a specific users folder. Once the search is completed, the task concluded with instructions for removing the identified items.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
