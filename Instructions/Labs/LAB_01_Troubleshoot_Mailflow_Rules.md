@@ -6,7 +6,7 @@ In the labs for this course, you're taking on the role of Adatum Corporations Me
 
 In this lab, you will be troubleshooting and identifying the potential root cause of Non-Delivery Reports (NDRs) that have been encountered during testing by one of your colleagues who shares the same administrative privileges and access as you. Your colleague has reported that they are experiencing NDRs when sending to specific external tenants, but they cannot remember which setting they may have configured to cause this behavior.
 
-In this lab, you will be assisting your colleague in troubleshooting the issue by reviewing the settings and configurations related to email delivery. You will be working with the Microsoft 365 admin center and Exchange admin center to identify any potential issues with the email routing and transport rules that may be causing the NDRs. By the end of the lab, you will have a better understanding of how to troubleshoot and identify the root cause of NDRs.
+For this specific scenario, you will be assisting your colleague in troubleshooting the issue by reviewing the settings and configurations related to email delivery. You will be working with the Microsoft 365 admin center and Exchange admin center to identify any potential issues with the email routing and transport rules that may be causing the NDRs. By the end of the lab, you will have a better understanding of how to troubleshoot and identify the root cause of NDRs.
 
 By understanding the different components that can cause NDRs, you will be better equipped to quickly identify and resolve any similar issues that may arise in the future. This will help to ensure that email communication remains reliable and efficient within your organization.
 
