@@ -4,7 +4,15 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
+In this lab, you will be focusing on the features that can help you protect sensitive information in your organization and troubleshoot any issues that may arise.
 
+First, we will review encrypting messages utilizing Sensitivity labels. This is an important feature that allows you to mark certain messages as containing sensitive information and then encrypt them to protect that information from unauthorized access. You will walk through the process of creating and applying sensitivity labels, as well as how to ensure that the encryption is working properly.
+
+Next, you will dive into Applying sensitivity label (via RMS template) to a Mail flow Rule. This feature allows you to automatically encrypt messages that contain sensitive information by setting up a rule that applies a specific sensitivity label to messages that meet certain criteria.
+
+Finally, you will test the behavior of the above mail flow rule to ensure that it is working as expected and that messages are being properly encrypted.
+
+By the end of this lab, you will have a thorough understanding of how to test and troubleshoot these features in your organization and how to protect sensitive information. These skills will be useful for any administrator or IT professional responsible for maintaining and securing a Microsoft 365 environment.
 
 ## Lab Setup
 
@@ -32,7 +40,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 
 ### Task 1 - Create a Sensitivity Label
 
-To utilize time more effectively, we're first going to create a new sensitivity label so that it has enough time to replicated by the time we reach task 4.
+In this lab task, you will create a Sensitivity label named "Highly Confidential - Project Falcon" using the Microsoft Purview compliance portal on LON-CL1. The purpose of this label will be to encrypt emails that contain sensitive information (as part of Project Falcon) and to ensure that they are only visible to the authorized users we choose.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -118,7 +126,7 @@ To utilize time more effectively, we're first going to create a new sensitivity 
 
 ### Task 2 - Configure a Mail Flow Rule to Apply Office Message Encryption
 
-We have been tasked to test the behavior of implementing a new Mail flow rule to encrypt emails when "Top secret" is in the subject field.
+In this task, you will be testing the behavior of implementing a new Mail flow rule to encrypt emails when "Project Falcon" is written in the subject field or body of a email. Using Mail Flow rules to automatically apply Encryption can help keep your organization secure in the event a user forgets to stamp their email correctly.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -162,7 +170,7 @@ We have been tasked to test the behavior of implementing a new Mail flow rule to
 
 ### Task 3 - Test Office Message Encryption Behavior
 
-In the previous task we created a new Mail flow rule to add Office Message encryption (OME) to emails with **Project Falcon** in the subject or body. We want to ensure that our external partners are able to view these encrypted emails.
+In the previous task you created a new Mail flow rule to add Office Message encryption (OME) to emails with **Project Falcon** in the subject or body. You will now test mail flow to ensure that our external partners will be able to open and view these encrypted emails as expected.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -224,7 +232,7 @@ In the previous task we created a new Mail flow rule to add Office Message encry
 
 ### Task 4 - Resolve Office Message Encryption Permission issue
 
-You'll now identify and resolve the issue with the mail flow rule created.
+In the previous task, we identified an issue where our external partners were receiving permission related issues when attempting to open Project Falcon encrypted emails. In this lab task, you will review the configuration settings in the "Project Falcon** Sensitivity label and modify the settings in order to allow our partners to view these emails.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
