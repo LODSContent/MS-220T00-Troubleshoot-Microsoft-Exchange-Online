@@ -4,7 +4,7 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you will be implementing and testing a custom spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings: 
+In this lab, you will be implementing and testing a custom spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
 
 - Empty messages: **On**
 - Embedded tags in HTML: **On**
@@ -25,7 +25,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
 2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
 3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
-4.  Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
 5. On the **What's your name?** window, enter your full name (or if you'd prefer, fictitious information), and then select **Next**.
 6. On the **What's your birthdate?** window, choose your **Country/region** and enter a **Birthdate**, then select **Next**.
 7. On the **Create account** window, select **Next** and solve the generated puzzle.
@@ -175,7 +175,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
 10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, that's correct! In task 1 of this lab, we modified the default anti-spam inbound policy to enable the following settings:
 
-    - <mark> Empty messages: **On** </mark>
+    - **Empty messages: On**
 
     - Embedded tags in HTML: **On**
 
