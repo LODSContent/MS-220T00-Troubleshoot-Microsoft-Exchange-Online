@@ -4,11 +4,11 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various Microsoft 365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you will be troubleshooting and identifying the potential root cause of Non-Delivery Reports (NDRs) that have been encountered during testing by one of your colleagues who shares the same administrative privileges and access as you. Your colleague has reported that they are experiencing NDRs when sending to specific external tenants, but they cannot remember which setting they may have configured to cause this behavior.
+In this lab, you'll be troubleshooting and identifying the potential root cause of Non-Delivery Reports (NDRs) that have been encountered during testing by one of your colleagues who shares the same administrative privileges and access as you. Your colleague has reported that they're experiencing NDRs when sending to specific external tenants, but they cannot remember which setting they may have configured to cause this behavior.
 
-For this specific scenario, you will be assisting your colleague in troubleshooting the issue by reviewing the settings and configurations related to email delivery. You will be working with the Microsoft 365 admin center and Exchange admin center to identify any potential issues with the email routing and transport rules that may be causing the NDRs. By the end of the lab, you will have a better understanding of how to troubleshoot and identify the root cause of NDRs.
+For this specific scenario, you'll be assisting your colleague in troubleshooting the issue by reviewing the settings and configurations related to email delivery. You'll be working with the Microsoft 365 admin center and Exchange admin center to identify any potential issues with the email routing and transport rules that may be causing the NDRs. By the end of the lab, you'll have a better understanding of how to troubleshoot and identify the root cause of NDRs.
 
-By understanding the different components that can cause NDRs, you will be better equipped to quickly identify and resolve any similar issues that may arise in the future. This will help to ensure that email communication remains reliable and efficient within your organization.
+By understanding the different components that can cause NDRs, you'll be better equipped to quickly identify and resolve any similar issues that may arise in the future. This will help to ensure that email communication remains reliable and efficient within your organization.
 
 ## Lab Setup
 
@@ -75,7 +75,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
 2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
 3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
-4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+4. Once a unique email address has been accepted, you'll be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
 
     **Important**: Before selecting **Next**, please be sure to review both the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement/default.aspx?azure-portal=true) and [Privacy and cookies statement](https://go.microsoft.com/fwlink/?LinkID=521839). By selecting **Next**, you choose to agree to Microsoft's service agreement.
 
@@ -84,7 +84,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 7. On the **Create account** window, select **Next** and solve the generated puzzle.
 8. On the **Stay signed in?** page, select **Yes**.
 9. In a new **Microsoft Edge** tab, navigate to the URL: **<https://outlook.live.com/mail/>**.
-10. Confirm you are able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
+10. Confirm you're able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
 
 ## Instructions
 

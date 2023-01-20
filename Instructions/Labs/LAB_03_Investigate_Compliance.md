@@ -4,13 +4,13 @@
 
 In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you will be testing the eDiscovery feature within Exchange Online for email data. You will be creating an eDiscovery (Standard) case and case hold in Exchange Online to manage the search, preservation, and export of email data relevant to a legal matter. A case hold is used to preserve relevant email data to prevent it from being deleted or modified.
+In this lab, you'll be testing the eDiscovery feature within Exchange Online for email data. You'll be creating an eDiscovery (Standard) case and case hold in Exchange Online to manage the search, preservation, and export of email data relevant to a legal matter. A case hold is used to preserve relevant email data to prevent it from being deleted or modified.
 
-You will also be reviewing the permissions and access requirements for eDiscovery case management in Exchange Online. This will include understanding who has the ability to create, manage, and delete eDiscovery cases for email data, and what level of access different users have to the email data within the cases.
+You'll also be reviewing the permissions and access requirements for eDiscovery case management in Exchange Online. This will include understanding who has the ability to create, manage, and delete eDiscovery cases for email data, and what level of access different users have to the email data within the cases.
 
-Lastly, you will be creating a content search for targeted email collections. This will involve specifying the criteria for the search and selecting specific email sources to be searched. By the end of the lab, you will have a better understanding of how to use the eDiscovery feature to search and preserve relevant email data in Exchange Online.
+Lastly, you'll be creating a content search for targeted email collections. This will involve specifying the criteria for the search and selecting specific email sources to be searched. By the end of the lab, you'll have a better understanding of how to use the eDiscovery feature to search and preserve relevant email data in Exchange Online.
 
-The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there is a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data. The ability to place a case hold on specific data can also be useful in preserving relevant information during an investigation.
+The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there's a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data. The ability to place a case hold on specific data can also be useful in preserving relevant information during an investigation.
 
 ## Lab Setup
 
@@ -41,7 +41,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 1. On **LON-CL1**, right-click the **Microsoft Edge** icon from your taskbar and select **New InPrivate Window**
 2. To create a new account, navigate to the following URL: **<https://signup.live.com>**
 3. On the **Create account** account window, type in a unique name followed by either **@Outlook.com** or **@Hotmail.com**( For example, **User1@Outlook.com**) and then select **Next**.
-4. Once a unique email address has been accepted, you will be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
+4. Once a unique email address has been accepted, you'll be prompted to **Create a password**. Enter a unique password that has at least 8 characters and contains at least two of the following: uppercase letters, lowercase letters, numbers, and symbols, and then select **Next**.
 
     **Important**: Before selecting **Next**, please be sure to review both the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement/default.aspx?azure-portal=true) and [Privacy and cookies statement](https://go.microsoft.com/fwlink/?LinkID=521839). By selecting **Next**, you choose to agree to Microsoft's service agreement.
 
@@ -50,13 +50,13 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 7. On the **Create account** window, select **Next** and solve the generated puzzle.
 8. On the **Stay signed in?** page, select **Yes**.
 9. In a new **Microsoft Edge** tab, navigate to the URL: **<https://outlook.live.com/mail/>**.
-10. Confirm you are able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
+10. Confirm you're able to sign-in to your new email account. Make note of your sign-in details for future lab tasks.
 
 ## Instructions
 
 ### Task 1 - Create an eDiscovery (Standard) Case
 
-In this task, you will be utilizing Microsoft 365 tools such as Exchange admin center, Outlook, and Microsoft Purview. The main focus of the lab is to create an eDiscovery case and hold, and understand the process of searching and preserving specific email data. The lab will provide an understanding of how to use these tools to manage and preserve email data for legal or compliance purposes.
+In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin center, Outlook, and Microsoft Purview. The main focus of the lab is to create an eDiscovery case and hold, and understand the process of searching and preserving specific email data. The lab will provide an understanding of how to use these tools to manage and preserve email data for legal or compliance purposes.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -137,7 +137,7 @@ In this task, you will be utilizing Microsoft 365 tools such as Exchange admin c
 30. On the **Review your settings** page, review the settings and if any need to be adjusted, select **Edit** next to the setting and make the necessary correction.
 Once all settings are correct, select **Submit**.
 
-    **Note:** you've just placed a hold on Alex Wilber’s account that will retain any emails that contain **Sensitive, Confidential, Secret** anywhere
+    **Note:** you've placed a hold on Alex Wilber’s account that will retain any emails that contain **Sensitive, Confidential, Secret** anywhere
     in the email and in the Subject line.
 
 31. Once prompted with **Succeeded** select **Done** to close out of the **New Hold** wizard.
@@ -172,13 +172,13 @@ Once all settings are correct, select **Submit**.
 
 42. In the **Confidential Search** pane, select **Review sample**.
 
-    Because the **MOD Administrator** account is not assigned the eDiscovery Manager or eDiscover Admin role group, you're unable to view the search results. This is because these eDiscover roles aren't assigned by default to the Organization Management role group, thereforee it’s not a part of the Global admin role. For more information, on what permissions you do have as part of the Organization Management role group, see [RBAC roles related to eDiscovery]( https://learn.microsoft.com/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide#rbac-roles-related-to-ediscovery?azure-portal=true).
+    Because the **MOD Administrator** account isn't assigned the eDiscovery Manager or eDiscover Admin role group, you're unable to view the search results. This is because these eDiscover roles aren't assigned by default to the Organization Management role group, therefore it’s not a part of the Global admin role. For more information, on what permissions you do have as part of the Organization Management role group, see [RBAC roles related to eDiscovery]( https://learn.microsoft.com/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide#rbac-roles-related-to-ediscovery?azure-portal=true).
 
     Select **OK** and then select **Close** to exit out of the **Confidential search** pane.
 
 ### Task 2 - Review eDiscovery Permissions
 
-In this task, you will be utilizing Microsoft 365 tools such as Exchange admin center, and Microsoft Purview, with a focus on understanding how to manage and preserve email data for legal or compliance purposes. This task includes steps for managing permissions, editing roles, and reviewing eDiscovery cases and samples in Microsoft 365 Defender and Microsoft Purview. It also covers how to navigate an eDiscovery case and case hold in Microsoft 365 and how to search for and preserve specific email data.
+In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin center, and Microsoft Purview, with a focus on understanding how to manage and preserve email data for legal or compliance purposes. This task includes steps for managing permissions, editing roles, and reviewing eDiscovery cases and samples in Microsoft 365 Defender and Microsoft Purview. It also covers how to navigate an eDiscovery case and case hold in Microsoft 365 and how to search for and preserve specific email data.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -230,7 +230,7 @@ In this task, you will be utilizing Microsoft 365 tools such as Exchange admin c
 
     **Note:** It may take up to a minute for results to populate on the **Confidential search samples** Page.
 
-    Because Nestor already has the **eDiscover administrator** role group assignment, he is able to view eDiscovery cases created by other administrators in his organization and review the samples.
+    Because Nestor already has the **eDiscover administrator** role group assignment, he's able to view eDiscovery cases created by other administrators in his organization and review the samples.
 
 21. At the top right-hand corner of the screen, select the **account manager** for **Nestor Wilke** (indicated by Nestor's User profile picture ) and then select **Sign out**.
 
@@ -238,7 +238,7 @@ In this task, you will be utilizing Microsoft 365 tools such as Exchange admin c
 
 ### Task 3 - Run a Content Search
 
-In this task, we will outline the process for connecting to and utilizing the Exchange Online Management Module via PowerShell in order to run a compliance search, specifically utilizing targeted collections. A targeted collection search can be used to identify specific items within a specific users folder. Once the search is completed, the task concluded with instructions for removing the identified items.
+In this task, we'll outline the process for connecting to and utilizing the Exchange Online Management Module via PowerShell in order to run a compliance search, specifically utilizing targeted collections. A targeted collection search can be used to identify specific items within a specific users folder. Once the search is completed, the task concluded with instructions for removing the identified items.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -272,9 +272,9 @@ In this task, we will outline the process for connecting to and utilizing the Ex
 
 11. A **Microsoft 365 Sign in** window will appear. Select the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com).
 
-12. A list of Folder Paths & Folder Path iD's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right-click to copy.
+12. A list of Folder Paths & Folder Path ID's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right-click to copy.
 
-    Here is an example of what the full sting will like (the letters and numbers will differ, this is just an example):
+    Here's an example of what the full sting will like (the letters and numbers will differ, this is just an example):
 
     **folderid:47EFE4AD1A8641408C8CCB0EDA12ACCE00000000010C0000**
 
@@ -302,7 +302,7 @@ In this task, we will outline the process for connecting to and utilizing the Ex
 
     `Get-ComplianceSearch -Identity "Inbox Search AlexW" | FL`
 
-    **Note:**: The search results display all users, but we only have an item count greater than 0 for Alex Wilber. This is because in the command ran above, we have exchangelocation -all. If we want to specific a single mailbox we can rerun the command and set the exchange location to the SMTP of Alex Wilber.
+    **Note:**: The search results display all users, but we only have an item count greater than 0 for Alex Wilber. This is because in the command ran above, we've exchangelocation -all. If we want to specific a single mailbox we can rerun the command and set the exchange location to the SMTP of Alex Wilber.
 
 18. To remove the confidential items identified out of Alex's inbox we'll need to start a new compliance action. At the command prompt type the following command press Enter:
 
@@ -324,6 +324,6 @@ In this task, we will outline the process for connecting to and utilizing the Ex
 
 24. you're now logged into **Outlook on the Web** against Alex Wilbers Mailbox. Take a few minutes to check Alex's **Inbox** & **Deleted items**.
 
-    Notice the confidential email sent by **Allan Deyoung** is not visible in any of Alex's mailbox folders. This indicates that you've successfully purged the confidential item.
+    Notice the confidential email sent by **Allan Deyoung** isn't visible in any of Alex's mailbox folders. This indicates that you've successfully purged the confidential item.
 
 ## End of lab 3
