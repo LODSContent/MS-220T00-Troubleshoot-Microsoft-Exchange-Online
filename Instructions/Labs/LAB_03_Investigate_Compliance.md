@@ -14,19 +14,19 @@ The knowledge and skills gained from this lab exercise can be applied to trouble
 
 ## Lab Setup
 
-### Configure Lab 2
+### Configure Lab 3
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
-2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 2**. In the **Lab 2** subfolder a .bat file named **Lab2setup.bat** should exist.
+2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 3**. In the **Lab 3** subfolder a .bat file named **Lab3setup.bat** should exist.
 
-    Right-click **Lab2setup.bat** and then select **Run as administrator** to start the lab setup process.
+    Right-click **Lab3setup.bat** and then select **Run as administrator** to start the lab setup process.
 
-    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab 2 setup** window will appear on the screen.
+    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab 3 setup** window will appear on the screen.
 
 3. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
-    **Important:** The **Lab 2 setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat step 2.
+    **Important:** The **Lab 3 setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat step 2.
 
 4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
@@ -262,7 +262,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 8. At the command prompt, type the following command press Enter:
 
-     `CD C:\Users\administrator\desktop\'Lab scripts'\lab2`
+     `CD C:\Users\administrator\desktop\'Lab scripts'\'lab 3'`
 
 9. At the command prompt, type the following command press Enter:
 
