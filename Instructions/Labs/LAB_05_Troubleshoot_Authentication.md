@@ -2,7 +2,11 @@
 
 ## Lab scenario
 
-Scenario here
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+
+In this lab, you'll install and configure Fiddler classic, a web debugging proxy tool. With Fiddler Classic, you can monitor and inspect the HTTP and HTTPS traffic of various applications. 
+
+In this specific scenario, we'll use Fiddler Classic to assist us with troubleshooting sign-on related errors in Microsoft Outlook related to the use of basic authentication.
 
 ## Lab Setup
 
@@ -27,6 +31,8 @@ Scenario here
 ## Instructions
 
 ### Task 1 - Configure Progress Telerik Fiddler Classic App
+
+In this task, you'll download, install and configure Fiddler Classic.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
@@ -114,6 +120,8 @@ Scenario here
 
 ### Task 2 - Review Authentication Behavior
 
+In this task, you'll utilize Fiddler Classic to review and test the behavior of outlook when Basic Authentication is passed (rather than modern authentication) from client to server. Basic Authentication has been in the process of being deprecated, and many organizations have already switched to more secure authentication methods.
+
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
     Both the **Fiddler** and **Outlook** apps should be open on **LON-CL1** with Fiddler connected to Outlooks Process ID (PID).
@@ -181,6 +189,8 @@ Scenario here
     If Outlook is still open at this time, please close it now as well.
 
 ### Task 3 - Enable ADAL on local PC
+
+In this final lab task, you'll reenable the Microsoft Authentication Library (ADAL) which is needed to support the use of modern authentication and MFA.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
