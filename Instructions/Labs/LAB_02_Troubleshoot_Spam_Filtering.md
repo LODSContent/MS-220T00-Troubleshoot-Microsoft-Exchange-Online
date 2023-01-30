@@ -12,7 +12,7 @@ In this lab, you'll be implementing and configuring spam filtering policy for yo
 - SPF record hard fail: **On**
 - Sender ID filtering hard fail: **On**
 
-The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that it is working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a custom spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
+The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that its working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a custom spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
 
 ## Lab Setup
 
@@ -44,7 +44,7 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 2. You'll now access **Microsoft 365 Defender** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://security.microsoft.com>**.
 
     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique
-    tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+    tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
 3. In the navigation pane on the left, scroll down to **Email & collaboration** and select **Policies & Rules**.
 
@@ -99,7 +99,7 @@ In this task, you'll be partnering up with a fellow student to exchange emails w
 
 **Note:**  If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email (@Outlook.com, @Hotmail.com, @live.com, etc.). Instructions to create a personal account are in the **Lab setup** Steps above if needed.
 
-1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
+1. You should still be logged into **LON-CL1** from the prior task with the **Anti-spam policies** tab open inside of **Microsoft Edge**; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. You'll now navigate to **Outlook on the Web**. On the **Anti-spam policies** page, select the **App Launcher** on the top left-hand corner of the screen and under the **Apps** header select the **Outlook** icon.
 
@@ -119,7 +119,7 @@ In this task, you'll be partnering up with a fellow student to exchange emails w
 
     When prompted with the message **Missing subject**, select **Send**.
 
-    **IMPORTANT:** if you don't have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Rather than logging out of your current Edge browser session, right-click the Microsoft Edge icon in the taskbar and select **New InPrivate Window**.
+    **IMPORTANT:** if you don't have another student to partner with, repeat steps 2-5 while logged into your personal account. Then send the email to your MOD administrator account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Rather than logging out of your current **Microsoft Edge** browser session, right-click the **Microsoft Edge** icon in the taskbar and select **New InPrivate Window**.
 
 6. After about 10-30 seconds you should notice that an email appears in your **Junk Email** Folder. Select your **Junk Email** folder to view it.
 
@@ -129,13 +129,13 @@ In this task, you'll be partnering up with a fellow student to exchange emails w
 
     The following Mail-Tip should be displayed: **This message was identified as junk. We'll delete it after 30 days**.
 
-9. Leave the **Mail - MOD Administrator - Outlook** Tab open in your Edge browser and proceed to the next task.
+9. Leave the **Mail - MOD Administrator - Outlook** Tab open in your **Microsoft Edge** browser and proceed to the next task.
 
 ### Task 3 - Review Message Headers to Identify Mail Flow Issues
 
 In the prior task, you identified that our test email landed in your junk email folder. In this task, we'll review the message headers using the Message Header Analyzer and verify whether or not this behavior was caused by the Anti-spam policy we modified back in task 1.
 
-1. You should still be logged into **LON-CL1** from the prior task with the **Mail - MOD Administrator - Outlook** tab open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
+1. You should still be logged into **LON-CL1** from the prior task with the **Mail - MOD Administrator - Outlook** tab open inside of **Microsoft Edge**; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. While still logged into **Outlook** as the **MOD Administrator** click back into the **Junk Email** folder if you've navigated away from it.
 
@@ -145,9 +145,9 @@ In the prior task, you identified that our test email landed in your junk email 
 
 4. In the **Message details** pop-up that appears, select all the text (Ctrl-A) from the message header and then copy it to your clipboard (Ctrl-C). Select **Close** once the contents have been fully copied.
 
-    You can now close the **Mail - MOD Administrator - Outlook** tab in your Edge browser.
+    You can now close the **Mail - MOD Administrator - Outlook** tab in your **Microsoft Edge** browser.
 
-5. We'll now be navigating to the **Message Header Analyzer** to review the message header copied in the previous step. In your Edge browser, open a new tab and enter the following URL: **<https://mha.azurewebsites.net/pages/mha.html>**.
+5. We'll now be navigating to the **Message Header Analyzer** to review the message header copied in the previous step. In your **Microsoft Edge** browser, open a new tab and enter the following URL: **<https://mha.azurewebsites.net/pages/mha.html>**.
 
 6. Under the heading **Insert the message header you would like to analyze** paste (Ctrl-V) the message header copied from earlier. One the header has been inserted, select **Analyze headers**.
 
@@ -155,7 +155,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
 8. Once you've finished reviewing the message header yourself, find the **Forefront Antispam Report Header** and expand it.
 
-    To the right of **Spam Confidence Level** select **9**. This should open up a new tab in Edge labeled **Antispam Stamps**.
+    To the right of **Spam Confidence Level** select **9**. This should open up a new tab in **Microsoft Edge** labeled **Antispam Stamps**.
 
     This Article reviews the various anti spam stamps added to a message, but we want to focus on the **Spam Confidence Level** (SCL):
 
@@ -163,15 +163,15 @@ In the prior task, you identified that our test email landed in your junk email 
 
     As the message header indicates our message has an SCL of 9, we'll want to dig further to determine why it was stamped this way.
 
-    Close out of the **Antispam stamps** tab in Edge and navigate back to the **Message header analyzer** tab.
+    Close out of the **Antispam stamps** tab in **Microsoft Edge** and navigate back to the **Message header analyzer** tab.
 
-9. With the **Forefront Antispam Report Header** still expanded, select the **HSPM** link next to **Protection Policy Category** which will open a new tab in Edge labeled **Anti-spam message headers in Microsoft 365**
+9. With the **Forefront Antispam Report Header** still expanded, select the **HSPM** link next to **Protection Policy Category** which will open a new tab in **Microsoft Edge** labeled **Anti-spam message headers in Microsoft 365**
 
     This is a great article to keep favorited to help decipher the various **Anti-spam** message headers. If we the find functionality (Ctrl-F) to find the term **HSPM** we can see that the category of protection policy applied to the message was **High confidence spam**.
 
     Take a few minutes to review the rest of the fields mentioned under **X-Forefront-Antispam-Report message header fields** to see if one might help us determine why this email was marked as spam and moved to the junk folder.
 
-    Once you've finished reviewing all the fields, close out of the **Anti-spam Message headers in Microsoft 365** tab in Edge and navigate back to the **Message header analyzer** tab.
+    Once you've finished reviewing all the fields, close out of the **Anti-spam Message headers in Microsoft 365** tab in **Microsoft Edge** and navigate back to the **Message header analyzer** tab.
 
 10. In the previous step, if you determined that the **X-CustomSpam** header points to the root cause, that's correct! In task 1 of this lab, we modified the default anti-spam inbound policy to enable the following settings:
 
@@ -189,7 +189,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
 11. To get ready for the next task, on the **Message header analyzer** Tab, scroll up to the top of the page and expand **Summary**. Copy (Ctrl-c) the **Message Id** without **<** or **>**.
 
-    Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in Edge and proceed to the next task.
+    Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in **Microsoft Edge** and proceed to the next task.
 
 ### Task 4 - Review a Message Trace using PowerShell
 
@@ -197,7 +197,7 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
-2. Minimize the Edge browser window and open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
+2. Minimize the **Microsoft Edge** browser window and open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
 3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
 

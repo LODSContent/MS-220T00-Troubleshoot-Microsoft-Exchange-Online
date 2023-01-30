@@ -6,11 +6,11 @@ In the labs for this course, you're taking on the role of Adatum Corporations Me
 
 In this lab, you'll be focusing on the features that can help you protect sensitive information in your organization and troubleshoot any issues that may arise.
 
-First, we'll review encrypting messages utilizing Sensitivity labels. This is an important feature that allows you to mark certain messages as containing sensitive information and then encrypt them to protect that information from unauthorized access. You'll walk through the process of creating and applying sensitivity labels, as well as how to ensure that the encryption is working properly.
+First, we'll review encrypting messages utilizing Sensitivity labels. This is an important feature that allows you to mark certain messages as containing sensitive information and then encrypt them to protect that information from unauthorized access. You'll walk through the process of creating and applying sensitivity labels, and how to ensure that the encryption is working properly.
 
 Next, you'll dive into Applying sensitivity label (via RMS template) to a Mail flow Rule. This feature allows you to automatically encrypt messages that contain sensitive information by setting up a rule that applies a specific sensitivity label to messages that meet certain criteria.
 
-Finally, you'll test the behavior of the above mail flow rule to ensure that it is working as expected and that messages are being properly encrypted.
+Finally, you'll test the behavior of the above mail flow rule to ensure that its working as expected and that messages are being properly encrypted.
 
 By the end of this lab, you'll have a thorough understanding of how to test and troubleshoot these features in your organization and how to protect sensitive information. These skills will be useful for any administrator or IT professional responsible for maintaining and securing a Microsoft 365 environment.
 
@@ -122,7 +122,7 @@ In this lab task, you'll create a Sensitivity label named "Highly Confidential -
 
 23. Once you see **Policy updated**, select **Done**.
 
-24. Leave the **Information protection - Microsoft Purview** tab open in Edge and proceed to the next task.
+24. Leave the **Information protection - Microsoft Purview** tab open in **Microsoft Edge** and proceed to the next task.
 
 ### Task 2 - Configure a Mail Flow Rule to Apply Office Message Encryption
 
@@ -130,7 +130,7 @@ In this task, you'll be implementing a new Mail flow rule to encrypt emails when
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
-2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. We'll now navigate to the **Exchange Admin Center** by opening a new tab in Edge and navigating to the following URL: **<https://admin.exchange.microsoft.com/>**.
+2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. We'll now navigate to the **Exchange Admin Center** by opening a new tab in **Microsoft Edge** and navigating to the following URL: **<https://admin.exchange.microsoft.com/>**.
 
 3. In the **Exchange Admin Center** (EAC), in the left-hand navigation pane select **Mail flow**. In the expanded menu that appears, select **Rules**.
 
@@ -156,7 +156,7 @@ In this task, you'll be implementing a new Mail flow rule to encrypt emails when
 
     Leave all other settings as default and then select **Next**.
 
-13. In the **Review and finish** page, Verify the rule conditions and settings are correct. If corrections are needed, select **Edit rule conditions** or **Edit rule settings** and make the necessary corrections. Once you've verified the conditions and rules are correct, select **Finish**.
+13. In the **Review and finish** page, Verify the rule conditions and settings are correct. If corrections are needed, select **Edit rule conditions,** or **Edit rule settings** and make the necessary corrections. Once you've verified the conditions and rules are correct, select **Finish**.
 
     It may take up to a minute to create the rule. Once **Transport rule created successfully** is displayed, select **Done**.
 
@@ -174,9 +174,9 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
-2. The **Microsoft Edge** browser should still be open on the **Exchange Admin Center** tabs. We now want to open **Outlook for the Web** by opening a new tab in Edge and navigating to the following URL: **<https://outlook.office.com/mail/>**.
+2. The **Microsoft Edge** browser should still be open on the **Exchange Admin Center** tabs. We now want to open **Outlook for the Web** by opening a new tab in **Microsoft Edge** and navigating to the following URL: **<https://outlook.office.com/mail/>**.
 
-    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
 3. In **Outlook on the Web** select **New mail**.
 
@@ -192,13 +192,13 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
 5. Select **Send**.
 
-    **Note:** If the email doesn't arrive inside of your partners / personal inbox, open a new Edge tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select **release email**. This issue may happen as some tenants may have pre-configured quarantine rules in place.
+    **Note:** If the email doesn't arrive inside of your partners / personal inbox, open a new **Microsoft Edge** tab and enter the following URL: **<https://security.microsoft.com/quarantine?viewid=Email>**. On the **Quarantine** page find and select the check box next to your email. In the options at top of the pane that opens, select **release email**. This issue may happen as some tenants may have pre-configured quarantine rules in place.
 
 6. You should receive an email in your inbox with the subject: **Project Falcon** from your partners admin account.
 
     Alternatively, if you're using a personal Microsoft Outlook email account follow the steps below before continuing:
 
-    - Minimize your open Edge browser.
+    - Minimize your open **Microsoft Edge** browser.
 
     - In the Task bar, right-click **Microsoft Edge** and select **New InPrivate Window**.
 
@@ -208,7 +208,7 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
     - Navigate to your inbox and confirm you see the email with the subject: **Project Falcon**.
 
-7. In the message preview, double click the email to open it in a new window. You should notice one of two possible messages displayed:
+7. In the message preview, double-click the email to open it in a new window. You should notice one of two possible messages displayed:
 
     **Message 1** - You'll see the OME wrapper container:
 
@@ -222,23 +222,23 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
     ![Screenshot of Office Message Encryption preview](/Images/OME_Message2.png)
 
-    **Note:** In some other scenarios there's a 3rd possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
+    **Note:** In some other scenarios there's a third possible message outcome that displays the message: **The message you tried to open is protected with Information Rights Management. The sender didn't give you the rights necessary to view the message. To open this message on behalf of another user, use Outlook. Download a free trial of Microsoft Outlook.**
 
-    No matter how the message is displayed to you / how you open the message, if you don't have the correct permissions you'll be unable to view the message body. This is because your organization / personal Microsoft Outlook email account wasn't granted the correct permissions to view these internal encrypted emails. In the real world, if you receive one of these permission related errors when opening up an encrypted message, it likely means that the sender will need to re-send with the appropriate Label (sensitivity label) applied.
+    No matter how the message is displayed to you / how you open the message, if you don't have the correct permissions you'll be unable to view the message body. This is because your organization / personal Microsoft Outlook email account wasn't granted the correct permissions to view these internal encrypted emails. In the real world, if you receive one of these permission-related errors when opening up an encrypted message, it likely means that the sender will need to resend with the appropriate Label (sensitivity label) applied.
 
 8. Keep the **Outlook** tab open in **Microsoft Edge** and proceed to the next task.
 
-    If you're using a personal Microsoft Outlook email account, leave the **InPrivate** Edge Browser open.
+    If you're using a personal Microsoft Outlook email account, leave the **InPrivate** Microsoft Edge Browser open.
 
 ### Task 4 - Resolve Office Message Encryption Permission issue
 
-In the previous task, we identified an issue where our external partners were receiving permission related issues when attempting to open Project Falcon encrypted emails. In this lab task, you'll review the configuration settings in the "Project Falcon" Sensitivity label and modify the settings in order to allow these partners to view the emails.
+In the previous task, we identified an issue where our external partners were receiving permission-related issues when attempting to open Project Falcon encrypted emails. In this lab task, you'll review the configuration settings in the "Project Falcon" Sensitivity label and modify the settings in order to allow these partners to view the emails.
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
-2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. If not, in a new Edge tab, enter following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
+2. The **Microsoft Edge** browser should still have the **Information protection - Microsoft Purview** tab open in **Microsoft Edge**. If not, in a new **Microsoft Edge** tab, enter following URL in the address bar: **<https://compliance.microsoft.com/mail/>**.
 
-     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
 3. In the **Microsoft Purview** compliance portal, on the left-hand navigation pane, select **Information Protection**.
 
@@ -292,7 +292,7 @@ In the previous task, we identified an issue where our external partners were re
 
     **Note:** the email may be in your **Junk Email** Folder.
 
-    You should now be able to view the full message body and it's contents:
+    You should now be able to view the full message body and its contents:
 
     ![Screenshot of Office Message Encryption Message](/Images/OME_Working.png)
 

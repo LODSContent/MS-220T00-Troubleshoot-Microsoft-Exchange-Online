@@ -38,7 +38,7 @@ Scenario here
 
 5. In the drop-down menu for **Country/Territory**, select your country or territory.
 
-6. If asked, in the drop-down mene for **State/Province**, select your state or province.
+6. If asked, in the drop-down menu for **State/Province**, select your state or province.
 
 7. Before checking the **I accept** check-box, please review the [Fiddler End User License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler).
 
@@ -50,7 +50,7 @@ Scenario here
 
 9. In the downloads pop-up, select **FIddlerSetup.exe**.
 
-10. You will be prompted to again review and agree to license agreement for Fiddler Classic, carefully read it prior to selecting **I Agree**
+10. You'll be prompted to again review and agree to license agreement for Fiddler Classic, carefully read it prior to selecting **I Agree**
 
     **Important:** By selecting **I agree** you agree to Fiddler's license agreement.
 
@@ -76,7 +76,7 @@ Scenario here
 
 20. On the **HTTPS** tab, select **Decrypt HTTPS traffic**.
 
-    **Note:** you will be prompted with a warning stating **SCARY TEXT AHEAD: Read Carefully!**. Select **Yes** to continue.
+    **Note:** you'll be prompted with a warning stating **SCARY TEXT AHEAD: Read Carefully!**. Select **Yes** to continue.
 
     ![Scary Text prompt](/Images/Scary_Text.png)
 
@@ -92,13 +92,13 @@ Scenario here
 
      ![Remove All](/Images/Fiddler_removeall.png)
 
-25. Next, we will configure Fiddler to only capture HTTPS traffic coming in and out of Outlook. First, in the windows task bar, select the **Outlook** icon.
+25. Next, we'll configure Fiddler to only capture HTTPS traffic coming in and out of Outlook. First, in the windows task bar, select the **Outlook** icon.
 
-     A new Outlook prompt asking to type in your **Email Address** Should appear. Do not type in you email / connect just yet.
+     A new Outlook prompt asking to type in your **Email Address** Should appear. Don't type in your email / connect yet.
 
     ![Outlook Prompt](/Images/Outlook_Prompt.png)
 
-26. We now want to re-arrange the Fiddler application window and the Outlook prompt side by side:
+26. We now want to rearrange the Fiddler application window and the Outlook prompt side by side:
 
     **Note:** It doesn't need to be perfect, we just want to have both windows displayed at the same time.
 
@@ -108,7 +108,7 @@ Scenario here
 
     ![Fiddler Animation](/Images/FiddlerAnimation.gif)
 
-    **Note:** The Outlook process ID (PID) in the GIF above, **outlook:9960**, wont match yours. the PID is a unique id given to every application on launch.
+    **Note:** The Outlook process ID (PID) in the GIF above, **outlook:9960**, wont match yours. the PID is a unique ID given to every application on launch.
 
 28. Leave both Outlook and Fiddler open before proceeding to the next task.
 
@@ -118,7 +118,7 @@ Scenario here
 
     Both the **Fiddler** and **Outlook** apps should be open on **LON-CL1** with Fiddler connected to Outlooks Process ID (PID).
 
-    If Fiddler is not connected to Outlook, repeat steps  17 & 24-28 from task 1
+    If Fiddler isn't connected to Outlook, repeat steps  17 & 24-28 from task 1
 
 2. After ensuring Fiddler is connected to Outlook's PID, in Fiddler, navigate to **File** and select **Capture traffic**.
 
@@ -126,17 +126,17 @@ Scenario here
 
 3. Navigate back to the Outlook prompt and under **Email address** enter: **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Connect**.
 
-    **Note:** Over if fiddler, you should now see some results populating. You will also be prompted with a **Windows Security** prompt:
+    **Note:** Over if fiddler, you should now see some results populating. You'll also be prompted with a **Windows Security** prompt:
 
     ![Windows Security Prompt](/Images/Windows_security_prompt.png)
 
 4. Up until this point in this lab series, all Microsoft 365 sign-in prompts have been utilizing **Modern Authentication**. The **Windows Security** prompt indicates that another form of authentication is being used (Basic, NTLM, Kerberos, Etc.). In this specific case, **Basic Authentication** is being used because ADAL was disabled from running against all office applications during the Lab 5 setup process.
 
-    We will now determine the behavior experienced when logging into outlook using **Basic Authentication**. In the **Windows Security** prompt, enter the password for Allan, which will be the same as your tenant password (used to sign into **MOD Administrator**) and then select **OK**.
+    We'll now determine the behavior experienced when logging into outlook using **Basic Authentication**. In the **Windows Security** prompt, enter the password for Allan, which will be the same as your tenant password (used to sign into **MOD Administrator**) and then select **OK**.
 
-5. The **Windows Security** prompt should briefly disappear and re-appear requesting Allan's password once again. This time, type in Allan's password once more (same as your tenant password) and this time before selecting **OK**, enable **Remember my credentials**.
+5. The **Windows Security** prompt should briefly disappear and reappear requesting Allan's password once again. This time, type in Allan's password once more (same as your tenant password) and this time before selecting **OK**, enable **Remember my credentials**.
 
-    **Note:** Even with **Remember my credentials**, we are repeatedly prompted for Allan's credentials. This effectively reproduces a credential loop issue.
+    **Note:** Even with **Remember my credentials**, we're repeatedly prompted for Allan's credentials. This effectively reproduces a credential loop issue.
 
 6. Close out of the **Windows Security** prompt.
 
@@ -146,7 +146,7 @@ Scenario here
 
     ![Something went wrong](/Images/Something_went_wrong.png)
 
-    **Note:** Because not all lab VM's are created equally, you may experience variations of behavior performing steps 4-9, but ultimately the end result should remain the same; the Outlook profile fails to be created. You may also see behavior where the profile is created but fails to connect to Exchange Online:
+    **Note:** Because not all lab VMs are created equally, you may experience variations of behavior performing steps 4-9, but ultimately the end result should remain the same; the Outlook profile fails to be created. You may also see behavior where the profile is created but fails to connect to Exchange Online:
 
     ![Microsoft Outlook Warning](/Images/Microsoft_Outlook_warning.png)
 
@@ -154,7 +154,7 @@ Scenario here
 
 10. In the Fiddler application, you should see multiple results displayed representing the various connection attempts performed by Outlook. Select the first **401** result with the URL of **../autodiscover/autodiscover.xml**.
 
-11. On the right hand side of the fiddler window, select **Inspectors**.
+11. On the right-hand side of the fiddler window, select **Inspectors**.
 
 12. While on the **Inspectors** tab, select **Raw** for both the Request and Response headers. Your screen should look similar to the following:
 
@@ -174,7 +174,7 @@ Scenario here
 
     ![Basic auth blocked error](/Images/Fiddler_basic_blocked.png)
 
-    The error **LiveIdBasicAuth:BasicAuthBlocked..** indicates that basic authentication is blocked in your organization as an authentication method. Because of this, authentication will always fail when basic auth is passed by the outlook client which will result in endless credential prompts for the user.
+    The error **LiveIdBasicAuth:BasicAuthBlocked..** indicates that basic authentication is blocked in your organization as an authentication method. Because of this, authentication will always fail when basic auth is passed by the outlook client, which will result in endless credential prompts for the user.
 
 15. Close out of the Fiddler application before proceeding to the next task.
 
@@ -198,7 +198,7 @@ Scenario here
 
 7. Exit **RegEdit** by click the **X** located on the top right-hand corner of the window.
 
-8. On the desktop open the folder named **Lab Scripts** and then the subfolder named **Lab 5**.
+8. On the desktop, open the folder named **Lab Scripts** and then the subfolder named **Lab 5**.
 
 9. In the **Lab 5** subfolder a .bat file named **ClearProfiles.bat** should exist. Right-click **ClearProfiles.bat** and select **Run as administrator**.
 
@@ -214,13 +214,13 @@ Scenario here
 
     ![M365 sign-on prompt](/Images/M365_signon.png)
 
-13. In the Microsoft 365 sign-on prompt, enter the password for Allan which will be the same as your tenant password (used to sign into **MOD Administrator**) and then select **OK**.
+13. In the Microsoft 365 sign-on prompt, enter the password for Allan, which will be the same as your tenant password (used to sign into **MOD Administrator**) and then select **OK**.
 
 14. On the **stay signed in to all your apps** prompt, select **No, sign in to this app only**.
 
 15. on the **Account successfully added** prompt, select **Done**.
 
-16. Once Outlook opens up to Allan's mailbox, verify that the account is connected to Exchange at the bottom right-hand corner of the screen which should display **Connected to: Microsoft Exchange**
+16. Once Outlook opens up to Allan's mailbox, verify that the account is connected to Exchange at the bottom right-hand corner of the screen, which should display **Connected to: Microsoft Exchange**
 
     **Note**: It may take between 30-60 second before Outlook fully opens.
 

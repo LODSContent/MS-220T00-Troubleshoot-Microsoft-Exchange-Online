@@ -118,13 +118,13 @@ In this task, you'll use the default global admin to sign in to the Outlook for 
 
     ![Screenshot of Non-Delivery Report](/Images/NDR_Message.png)
 
-10. Take a few minutes reviewing the NDR in it's entirety before proceeding to the next task.
+10. Take a few minutes reviewing the NDR in its entirety before proceeding to the next task.
 
 ### Task 2 - Analyze a Message Trace
 
 In this task, you'll use the default global admin to sign in to the Exchange Admin Center (EAC) and initiate your first troubleshooting task of a performing a message trace and analyzing the results. Performing messages traces is a crucial task performed by Exchange Administrators to ensure mail flow is operational.  
 
-1. You should still be logged into **LON-CL1** from the prior task with Outlook Web Mail still open inside of Microsoft Edge; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
+1. You should still be logged into **LON-CL1** from the prior task with Outlook Web Mail still open inside of **Microsoft Edge**; if necessary, log back into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**.
 
 2. With **Outlook for the Web** still open, At the top left-hand corner of the web-page, select the **App launcher** icon.
 
@@ -138,7 +138,7 @@ In this task, you'll use the default global admin to sign in to the Exchange Adm
 
 5. Under the new list of Admin Centers that appears, select **Exchange**.
 
-    A new tab will open inside of Edge for The **Exchange Admin Center** (EAC).
+    A new tab will open inside of **Microsoft Edge** for The **Exchange Admin Center** (EAC).
 
 6. in the **EAC**, on the left-hand navigation pane, select **Mail flow** and then **Message trace**.
 
@@ -146,7 +146,7 @@ In this task, you'll use the default global admin to sign in to the Exchange Adm
 
 8. In the **New message trace** pane that appears, the default values for the **Messages sent from my primary domain in the last day** query are displayed. You can control which messages are selected based on who sent and received the messages and how many days ago the messages were sent.  
 
-     Starting with this default query as a template, you'll now customize it's settings to create a custom query that checks for emails sent to the **Contoso.com** domain in the past day.  
+     Starting with this default query as a template, you'll now customize its settings to create a custom query that checks for emails sent to the **Contoso.com** domain in the past day.  
 
     - You can customize the **Senders** field to search for messages that were sent from a specific domain. By default, the query will select messages sent from all user accounts in your Microsoft 365 tenant; that is, from all user accounts whose primary domain matches the tenant of **@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider). Therefore, do NOT change this value.  
 
@@ -176,7 +176,7 @@ In this task, you'll use the default global admin to sign in to the Exchange Adm
 
     **Note:** the title of this pane should match whatever subject you used when sending the original email back in Task 1 step 6.
 
-    Scroll down and expand **Message events** to show more details. Take a few minutes to expand each event and it's results.
+    Scroll down and expand **Message events** to show more details. Take a few minutes to expand each event and its results.
 
 17. With the Message events still expanded, the last event should look similar to:
 
@@ -228,15 +228,15 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
     ![Screenshot of Get-TransportRule Output](/Images/Get_TransportRule_Output.png)
 
-    In the current configuration, if any email address contains the words **Contoso.com** it will be reject in transport. When administrating a large organization it's always important to fully understand the implications transport rules may have on your business. When in doubt, you can use the test functionality. This way, if you accidentally create a condition that doesn't do exactly what you want or interacts with other rules in unexpected ways, you won't have any unintended consequences. For more information, see [Test mail flow rules in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules?azure-portal=true).
+    In the current configuration, if any email address contains the words **Contoso.com** it will be reject in transport. When administrating a large organization its always important to fully understand the implications transport rules may have on your business. When in doubt, you can use the test functionality. This way, if you accidentally create a condition that doesn't do exactly what you want or interacts with other rules in unexpected ways, you won't have any unintended consequences. For more information, see [Test mail flow rules in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules?azure-portal=true).
 
 12. We'll now switch from PowerShell to the **Exchange Admin Center** to view the Rules user interface.
 
     Close the PowerShell window and then select the **Microsoft Edge** icon on the taskbar. The **EAC** should open up to the **Message trace search results** page.
 
-    If you exited out of Edge previously, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
+    If you exited out of **Microsoft Edge** previously, in a new tab, enter **<https://admin.exchange.microsoft.com/>**.
 
-    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+    If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider) and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
 13. On the left-hand navigation pane in the **EAC**, select **Mail flow** and then select **Rules**.
 
@@ -252,9 +252,9 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
     Back on the **Rules** page, **Rule 1** should now show a status of **Disabled**.
 
-    You can now close the **Exchange admin center** tab in your Edge browser. You should still
+    You can now close the **Exchange admin center** tab in your **Microsoft Edge** browser. You should still
 
-17. Navigate back to the **Microsoft 365 admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your Edge browser.
+17. Navigate back to the **Microsoft 365 admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your **Microsoft Edge** browser.
 
 18. Select the **App Launcher** icon at the top left hand corner of the web page and then select the **Outlook** icon under the **Apps** header.
 

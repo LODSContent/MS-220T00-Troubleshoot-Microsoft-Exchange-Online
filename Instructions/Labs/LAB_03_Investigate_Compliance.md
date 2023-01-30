@@ -62,7 +62,7 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
 2. You'll start by logging into **Allan Deyoung**, a user in your tenant. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://outlook.office.com/mail/>**.
 
-3. On the **Sign in** page, enter **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page (Located under the resources tab of your VM's instruction pane). Select **Sign in**.
+3. On the **Sign in** page, enter **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider), and then enter the tenant email password provided by your lab hosting provider on the **Enter password** page (Located under the resources tab of your VMs instruction pane). Select **Sign in**.
 
 4. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **No**.
 
@@ -78,13 +78,13 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
 7. Select **Send**.
 
-8. We can now log out of **Allan Deyoung's** mailbox by selecting the **account manager** (indicated by Allan's profile picture) and then select **Sign out**
+8. We can now sign out of **Allan Deyoung's** mailbox by selecting the **account manager** (indicated by Allan's profile picture) and then select **Sign out**
 
-9. Close out of the **sign out** tab in Edge.
+9. Close out of the **sign out** tab in **Microsoft Edge**.
 
 10. You'll now access **Microsoft Purview** using the **MOD Administrator** account. Open a new tab in **Microsoft Edge** and enter the following URL in the address bar: **<https://compliance.microsoft.com>**.
 
-11. On the **Sign in** page, select **Use another account**. Sign in with the tenant email account provided **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider), and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+11. On the **Sign in** page, select **Use another account**. Sign in with the tenant email account provided **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider), and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
 12. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **Yes**.
 
@@ -166,7 +166,7 @@ Once all settings are correct, select **Submit**.
 
 40. Select **Next**, **Submit** and **Done**. This initiates the search. It may take several minutes for the Search to complete.
 
-    **Note:** It may take up to a minute for the **New search created** page to appear after hitting **Submit**.
+    **Note:** It may take up to a minute for the **New search-created** page to appear after hitting **Submit**.
 
 41. In the **eDiscovery (Standard) &gt; AlexWilber-case01** page, the **Searches** tab should already be Selected. select the new search that was created and a new pane for **Confidential search** will be displayed.
 
@@ -186,9 +186,9 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
     At the top right-hand corner of the screen, select the **account manager** for **MOD Administrator** (indicated with the letter **MA** ) and then select **Sign out**.
 
-3. Next we'll review permissions in the **Microsoft 365 Defender** portal. Close and re-open **Microsoft Edge**, then navigate to the following URL: **<https://security.microsoft.com>**.
+3. Next we'll review permissions in the **Microsoft 365 Defender** portal. Close and reopen **Microsoft Edge**, then navigate to the following URL: **<https://security.microsoft.com>**.
 
-4. On the **Sign in** page, select **Use another account**. Sign in with the email **NestorW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider), and the tenant password provided (Found under the resources tab in the VM's instruction pane).
+4. On the **Sign in** page, select **Use another account**. Sign in with the email **NestorW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is your unique tenant prefix provided by your lab hosting provider), and the tenant password provided (Found under the resources tab in the VMs instruction pane).
 
     If prompted, On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **Yes**.
 
@@ -272,13 +272,13 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 11. A **Microsoft 365 Sign in** window will appear. Select the **Mod Administrator** account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com).
 
-12. A list of Folder Paths & Folder Path ID's will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right-click to copy.
+12. A list of Folder Paths & Folder Path IDs will be displayed. We want to copy the ID of Alex's inbox folder. Highlight the entire string starting with **folderid:xxxxxx...** and right-click to copy.
 
     Here's an example of what the full sting will like (the letters and numbers will differ, this is just an example):
 
     **folderid:47EFE4AD1A8641408C8CCB0EDA12ACCE00000000010C0000**
 
-13. We'll now start a new compliance search. To do this, we must first connect to the Security & Compliance Powershell module. At the command prompt. type the following command press Enter:
+13. We'll now start a new compliance search. To do this, we must first connect to the Security & Compliance PowerShell module. At the command prompt. type the following command press Enter:
 
     `Connect-IPPSSession -UserPrincipalName admin@M365xZZZZZZ.onmicrosoft.com`
 
@@ -294,7 +294,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     `Start-ComplianceSearch -Identity $Search.Identity`
 
-16. It Will take a few minutes for the compliance search to complete. To check it's status, at the command prompt type the following command press Enter:
+16. It Will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press Enter:
 
     `Get-ComplianceSearch -Identity "Inbox Search AlexW"`
 
@@ -308,7 +308,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     `New-ComplianceSearchAction -SearchName "Inbox Search AlexW" -Purge -PurgeType HardDelete -Confirm:$false`
 
-19. It Will take a few minutes for the compliance action to complete. To check it's status, at the command prompt type the following command press Enter:
+19. It Will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press Enter:
 
     `Get-ComplianceSearchAction "Inbox search AlexW_Purge" | FL`
 

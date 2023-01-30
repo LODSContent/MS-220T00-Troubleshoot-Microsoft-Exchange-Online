@@ -30,13 +30,13 @@ demo:
 
 1. Fusce tincidunt sapien nec dolor congue facilisis lacinia quis urna.
 
-    > **Note:** Ut feugiat est id ultrices gravida.
+    > **Note:** Ut feugiat est ID ultrices gravida.
 
 1. Phasellus urna lacus, luctus at suscipit vitae, maximus ac nisl. 
 
     - Morbi in tortor finibus, tempus dolor a, cursus lorem. 
 
-    - Maecenas id risus pharetra, viverra elit quis, lacinia odio. 
+    - Maecenas ID risus pharetra, viverra elit quis, lacinia odio. 
 
     - Etiam rutrum pretium enim. 
 
