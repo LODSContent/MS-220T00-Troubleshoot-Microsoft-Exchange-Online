@@ -6,7 +6,23 @@ Scenario here
 
 ## Lab Setup
 
-**Note:** In this lab exercise, you'll partner with another student to exchange emails with. If you don't have a partner, you can exchange emails from a personal Microsoft Outlook email account (@outlook.com, @Hotmail.com, @live.com, etc.) with your tenant admin account, **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the unique tenant prefix provided by your lab hosting provider)
+### Configure Lab 5
+
+1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
+
+2. Once logged into **LON-CL1**, open the folder on the desktop named **Lab Scripts** and then the subfolder named **Lab 5**. In the **Lab 5** subfolder a .bat file named **Lab5setup.bat** should exist.
+
+    Right-click **Lab5setup.bat** and then select **Run as administrator** to start the lab setup process.
+
+    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab 5 setup** window will appear on the screen.
+
+3. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+
+    **Important:** The **Lab 5 setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat step 2.
+
+4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+
+    **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
 
 ## Instructions
 
@@ -84,7 +100,7 @@ Scenario here
 
 26. We now want to re-arrange the Fiddler application window and the Outlook prompt side by side:
 
-    **Note:** It doesnt need to be perfect, we just want to have both windows displayed at the same time.
+    **Note:** It doesn't need to be perfect, we just want to have both windows displayed at the same time.
 
     ![Window Configuration](/Images/Side_by_side.png)
 
@@ -96,7 +112,7 @@ Scenario here
 
 28. Leave both Outlook and Fiddler open before proceeding to the next task.
 
-### Task - Review Basic Authentication Behavior
+### Task 2 - Review Authentication Behavior
 
 1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
 
@@ -124,16 +140,92 @@ Scenario here
 
 6. Close out of the **Windows Security** prompt.
 
-7. Back in the Account creation prompt for Outlook, you will see **Account successfully added**, which in this case a false positive. Select **Done**. 
+7. Close out of all **windows security** prompts that may appear.
 
-8. Close out of all **windows security** prompts that may appear.
+8. A **Something went wrong** warning popup should display, select **X** to close the window.
 
-9. A **Microsoft Outlook** warning popup should display, select **OK**
+    ![Something went wrong](/Images/Something_went_wrong.png)
+
+    **Note:** Because not all lab VM's are created equally, you may experience variations of behavior performing steps 4-9, but ultimately the end result should remain the same; the Outlook profile fails to be created. You may also see behavior where the profile is created but fails to connect to Exchange Online:
 
     ![Microsoft Outlook Warning](/Images/Microsoft_Outlook_warning.png)
 
-    **Note:** Because not all lab VM's are created equally, you may experience variations of behavior performing steps 4-9, but ultimately the end result should remain the same; the Outlook profile is created, but fails to load because we cannot connect to exchange or profile creation fails altogether because we cannot connect to exchange.
+9. Maximize the fiddler application window.
 
-10. Maximize the fiddler application window.
+10. In the Fiddler application, you should see multiple results displayed representing the various connection attempts performed by Outlook. Select the first **401** result with the URL of **../autodiscover/autodiscover.xml**.
 
-11. In the Fiddler application, you should see multiple results displayed representing the various connection attempts performed by Outlook. Expand the **URL** column to see the entire URL of the HTTPS requests. 
+11. On the right hand side of the fiddler window, select **Inspectors**.
+
+12. While on the **Inspectors** tab, select **Raw** for both the Request and Response headers. Your screen should look similar to the following:
+
+    ![Microsoft Outlook Warning](/Images/Fiddler_inspectors.png)
+
+    You should now have the first **401** result selected With fiddler configured to view the request and response headers as raw text files. Take a moment to review all of its contents.
+
+    This first **401** result is our authentication challenge, where the authentication headers dictate the type of authentication being used. In this case, **WWW-Authenticate: Basic Realm=''** should be displayed in the Response header (bottom section):
+
+    ![Basic auth response header](/Images/Fiddler_basic.png)
+
+13. Select the second **401** result with the same URL of **../autodiscover/autodiscover.xml**. Take a moment to review the results on the request header (top section). There should now be a new header labeled **Authorization** with a string populated as its value, for example: **Basic QWXSYW5EQE0zNjV4MJC0MTsKousTT...**
+
+14. With the second **401** result still selected, take a moment to review the response header (bottom section) for any errors indicated.
+
+    You should see the **X-AutoDiscovery-Error** header populated with a value similar to below:
+
+    ![Basic auth blocked error](/Images/Fiddler_basic_blocked.png)
+
+    The error **LiveIdBasicAuth:BasicAuthBlocked..** indicates that basic authentication is blocked in your organization as an authentication method. Because of this, authentication will always fail when basic auth is passed by the outlook client which will result in endless credential prompts for the user.
+
+15. Close out of the Fiddler application before proceeding to the next task.
+
+    If Outlook is still open at this time, please close it now as well.
+
+### Task 3 - Enable ADAL on local PC
+
+1. You should still be logged into **LON-CL1** as the **Administrator** with a password of **Pa55w.rd**; however, if the Windows sign-in page appears, then sign-in now.
+
+2. In the windows taskbar, select the search icon and type in **RegEdit**.
+
+3. Right-click **RegEdit** and select **Run as Administrator**.
+
+4. Navigate to the following location: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity**
+
+    ![RegEdit Identity location](/Images/Regedit.png)
+
+5. Right-click **EnableADAL** and then select **Modify**.
+
+6. Under **Value data** enter a value of **1**, then select **OK**.
+
+7. Exit **RegEdit** by click the **X** located on the top right-hand corner of the window.
+
+8. On the desktop open the folder named **Lab Scripts** and then the subfolder named **Lab 5**.
+
+9. In the **Lab 5** subfolder a .bat file named **ClearProfiles.bat** should exist. Right-click **ClearProfiles.bat** and select **Run as administrator**.
+
+    Close out of file explorer.
+
+10. In the windows taskbar, select the **Outlook** icon.
+
+11. On the **New Profile** prompt, under **Profile Name** enter **Outlook1** and then select ok.
+
+12. In the Outlook prompt that appears, under **Email address** enter: **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Connect**.
+
+    You should now see a Microsoft 365 sign-on prompt displayed like:
+
+    ![M365 sign-on prompt](/Images/M365_signon.png)
+
+13. In the Microsoft 365 sign-on prompt, enter the password for Allan which will be the same as your tenant password (used to sign into **MOD Administrator**) and then select **OK**.
+
+14. On the **stay signed in to all your apps** prompt, select **No, sign in to this app only**.
+
+15. on the **Account successfully added** prompt, select **Done**.
+
+16. Once Outlook opens up to Allan's mailbox, verify that the account is connected to Exchange at the bottom right-hand corner of the screen which should display **Connected to: Microsoft Exchange**
+
+    **Note**: It may take between 30-60 second before Outlook fully opens.
+
+17. Congrats! You have successfully enabled ADAL to run locally on your VM client. ADAL is required to be running in order for Modern Authentication / Multi-Factor Authentication to work properly.
+
+    You have now completed lab 5 and all labs in this course.
+
+## End of lab 5
