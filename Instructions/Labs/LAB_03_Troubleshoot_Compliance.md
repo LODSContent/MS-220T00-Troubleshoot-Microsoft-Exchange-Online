@@ -1,4 +1,4 @@
-# Lab 3 – Investigate and Diagnose Problems With Compliance
+# Lab 3 – Troubleshoot Messaging Compliance
 
 ## Lab scenario
 
@@ -13,6 +13,42 @@ Lastly, you'll be creating a content search for targeted email collections. This
 The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there's a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data. The ability to place a case hold on specific data can also be useful in preserving relevant information during an investigation.
 
 ## Lab Setup
+
+The labs in this course have been prepared for a Microsoft Exchange deployment at Adatum Corporation. Adatum is running a Microsoft 365 cloud-only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Exchange in a Microsoft 365 deployment. You'll be provided with one virtual machines and a Microsoft 365 tenant to complete the lab steps.
+
+### Sign in to the lab virtual machines
+
+The labs in this course will use one virtual machine:
+
+- **LON-CL1:** A stand-alone Windows 11 client virtual machine with Microsoft 365 suite of apps pre-installed.
+
+**Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
+
+**Important:** The exercises in the MS-220 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You'll sign-into the VMs as a local administrator instead of a domain account. Following your sign-in, the desktop will indicate that you're logged in on **LON-CL1**
+
+### Review installed applications
+
+Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
+
+- Microsoft Outlook
+
+### Review Microsoft 365 tenant
+
+Besides the single VM, you'll also be provided with a Microsoft 365 tenant with the following highlights:
+
+- Office 365 E5 with Enterprise Mobility + Security E5.
+
+- 15 licenses in total with 5 available of 15 (10 used).
+
+- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
+
+- **Note:** Microsoft 365 sign-in instructions will be provided to you by your instructor.
+
+- The username of the Global Administrator (MOD Administrator) is **admin@xxxxxZZZZZZ.onmicrosoft.com**.
+
+- **xxxxxZZZZZZ.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (xxxxxZZZZZZ) is the unique tenant ID provided by the lab hosting provider. The **xxxxxZZZZZZ** portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
+
+    **IMPORTANT:** The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
 
 ### Configure Lab 3
 

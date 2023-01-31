@@ -10,6 +10,42 @@ In this specific scenario, we'll use Fiddler Classic to assist us with troublesh
 
 ## Lab Setup
 
+The labs in this course have been prepared for a Microsoft Exchange deployment at Adatum Corporation. Adatum is running a Microsoft 365 cloud-only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Exchange in a Microsoft 365 deployment. You'll be provided with one virtual machines and a Microsoft 365 tenant to complete the lab steps.
+
+### Sign in to the lab virtual machines
+
+The labs in this course will use one virtual machine:
+
+- **LON-CL1:** A stand-alone Windows 11 client virtual machine with Microsoft 365 suite of apps pre-installed.
+
+**Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
+
+**Important:** The exercises in the MS-220 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You'll sign-into the VMs as a local administrator instead of a domain account. Following your sign-in, the desktop will indicate that you're logged in on **LON-CL1**
+
+### Review installed applications
+
+Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
+
+- Microsoft Outlook
+
+### Review Microsoft 365 tenant
+
+Besides the single VM, you'll also be provided with a Microsoft 365 tenant with the following highlights:
+
+- Office 365 E5 with Enterprise Mobility + Security E5.
+
+- 15 licenses in total with 5 available of 15 (10 used).
+
+- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
+
+- **Note:** Microsoft 365 sign-in instructions will be provided to you by your instructor.
+
+- The username of the Global Administrator (MOD Administrator) is **admin@xxxxxZZZZZZ.onmicrosoft.com**.
+
+- **xxxxxZZZZZZ.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (xxxxxZZZZZZ) is the unique tenant ID provided by the lab hosting provider. The **xxxxxZZZZZZ** portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
+
+    **IMPORTANT:** The instructions that are provided in the lab exercise for this course are based on the new Microsoft 365 admin center UI and not the classic UI.
+
 ### Configure Lab 5
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
@@ -36,7 +72,7 @@ In this task, you'll download, install and configure Fiddler Classic.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
-2. navigate to the following URL: **<https://www.telerik.com/download/fiddler>**
+2. navigate to the following URL: **<https://www.telerik.com/download/Fiddler>**
 
 3. On the left-hand side of the webpage appears, in the drop-down menu **How do you plan to use Fiddler?**, select **Client application development/debugging**.
 
@@ -46,7 +82,7 @@ In this task, you'll download, install and configure Fiddler Classic.
 
 6. If asked, in the drop-down menu for **State/Province**, select your state or province.
 
-7. Before checking the **I accept** check-box, please review the [Fiddler End User License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler).
+7. Before checking the **I accept** check-box, please review the [Fiddler End User License Agreement](https://www.telerik.com/purchase/license-agreement/Fiddler).
 
     **Important:** By selecting **I accept** you agree to Fiddler's License agreement.
 
@@ -134,7 +170,7 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
 3. Navigate back to the Outlook prompt and under **Email address** enter: **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Connect**.
 
-    **Note:** Over if fiddler, you should now see some results populating. You'll also be prompted with a **Windows Security** prompt:
+    **Note:** Over if Fiddler, you should now see some results populating. You'll also be prompted with a **Windows Security** prompt:
 
     ![Windows Security Prompt](/Images/Windows_security_prompt.png)
 
@@ -158,17 +194,17 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
     ![Microsoft Outlook Warning](/Images/Microsoft_Outlook_warning.png)
 
-9. Maximize the fiddler application window.
+9. Maximize the Fiddler application window.
 
 10. In the Fiddler application, you should see multiple results displayed representing the various connection attempts performed by Outlook. Select the first **401** result with the URL of **../autodiscover/autodiscover.xml**.
 
-11. On the right-hand side of the fiddler window, select **Inspectors**.
+11. On the right-hand side of the Fiddler window, select **Inspectors**.
 
 12. While on the **Inspectors** tab, select **Raw** for both the Request and Response headers. Your screen should look similar to the following:
 
     ![Microsoft Outlook Warning](/Images/Fiddler_inspectors.png)
 
-    You should now have the first **401** result selected With fiddler configured to view the request and response headers as raw text files. Take a moment to review all of its contents.
+    You should now have the first **401** result selected With Fiddler configured to view the request and response headers as raw text files. Take a moment to review all of its contents.
 
     This first **401** result is our authentication challenge, where the authentication headers dictate the type of authentication being used. In this case, **WWW-Authenticate: Basic Realm=''** should be displayed in the Response header (bottom section):
 

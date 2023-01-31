@@ -16,7 +16,7 @@ The labs in this course have been prepared for a Microsoft Exchange deployment a
 
 ### Sign in to the lab virtual machines
 
-The labs in this course will use two virtual machines:
+The labs in this course will use one virtual machine:
 
 - **LON-CL1:** A stand-alone Windows 11 client virtual machine with Microsoft 365 suite of apps pre-installed.
 
