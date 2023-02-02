@@ -2,11 +2,11 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you'll be focusing on the features that can help you protect sensitive information in your organization and troubleshoot any issues that may arise.
+In this lab, you'll be focusing on the features that can help you protect sensitive information in your organization and to troubleshoot any issues that may arise.
 
-First, we'll review encrypting messages utilizing Sensitivity labels. This is an important feature that allows you to mark certain messages as containing sensitive information and then encrypt them to protect that information from unauthorized access. You'll walk through the process of creating and applying sensitivity labels, and how to ensure that the encryption is working properly.
+First, we'll review encrypting messages utilizing Sensitivity labels. This is an important feature that allows you to mark certain messages as containing sensitive information and then encrypt them to protect that information from unauthorized access. You'll walk through the process of creating and applying sensitivity labels, and ensure that the encryption is working properly.
 
 Next, you'll dive into Applying sensitivity label (via RMS template) to a Mail flow Rule. This feature allows you to automatically encrypt messages that contain sensitive information by setting up a rule that applies a specific sensitivity label to messages that meet certain criteria.
 
