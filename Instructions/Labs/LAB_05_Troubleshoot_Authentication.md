@@ -2,11 +2,11 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
 In this lab, you'll install and configure Fiddler classic, a web debugging proxy tool. With Fiddler Classic, you can monitor and inspect the HTTP and HTTPS traffic of various applications.
 
-In this specific scenario, we'll use Fiddler Classic to assist us with troubleshooting sign-on related errors in Microsoft Outlook related to the use of basic authentication.
+In this specific scenario, you'll use Fiddler Classic to help troubleshoot sign-on related errors in Microsoft Outlook related to the use of basic authentication.
 
 ## Lab Setup
 
