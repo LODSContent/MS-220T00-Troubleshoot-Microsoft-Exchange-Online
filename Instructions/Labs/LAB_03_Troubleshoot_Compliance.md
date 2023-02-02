@@ -2,15 +2,15 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you'll be testing the eDiscovery feature within Exchange Online for email data. You'll be creating an eDiscovery (Standard) case and case hold in Exchange Online to manage the search, preservation, and export of email data relevant to a legal matter. A case hold is used to preserve relevant email data to prevent it from being deleted or modified.
+In this lab, you'll be testing the eDiscovery feature within Exchange Online for email data. You'll be creating an eDiscovery (Standard) case and case hold in Exchange Online to manage the search, preservation, and export of email data relevant to a hypothetical legal matter. A case hold is used to preserve relevant email data to prevent it from being deleted or modified.
 
 You'll also be reviewing the permissions and access requirements for eDiscovery case management in Exchange Online. This will include understanding who has the ability to create, manage, and delete eDiscovery cases for email data, and what level of access different users have to the email data within the cases.
 
 Lastly, you'll be creating a content search for targeted email collections. This will involve specifying the criteria for the search and selecting specific email sources to be searched. By the end of the lab, you'll have a better understanding of how to use the eDiscovery feature to search and preserve relevant email data in Exchange Online.
 
-The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there's a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data. The ability to place a case hold on specific data can also be useful in preserving relevant information during an investigation.
+The knowledge and skills gained from this lab exercise can be applied to troubleshoot future issues within an organization. For example, if an employee leaves the company and their email needs to be reviewed for any relevant information, the eDiscovery feature can be used to search and preserve the email data. Additionally, if there's a legal matter and specific email data needs to be provided as evidence, the eDiscovery feature can be used to search and export the relevant data.
 
 ## Lab Setup
 
