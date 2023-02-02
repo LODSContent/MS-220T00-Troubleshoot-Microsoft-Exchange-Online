@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you'll be implementing and configuring spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
+In this lab, you'll be implementing and configuring a spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
 
 - Empty messages: **On**
 - Embedded tags in HTML: **On**
@@ -12,7 +12,7 @@ In this lab, you'll be implementing and configuring spam filtering policy for yo
 - SPF record hard fail: **On**
 - Sender ID filtering hard fail: **On**
 
-The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that its working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a custom spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
+The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that its working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
 
 ## Lab Setup
 
