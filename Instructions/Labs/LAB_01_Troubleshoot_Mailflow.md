@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various Microsoft 365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various Microsoft 365 & Exchange functionalities as they relate to Adatum's business requirements.
 
 In this lab, you'll be troubleshooting and identifying the potential root cause of Non-Delivery Reports (NDRs) that have been encountered during testing by one of your colleagues who shares the same administrative privileges and access as you. Your colleague has reported that they're experiencing NDRs when sending to specific external tenants, but they cannot remember which setting they may have configured to cause this behavior.
 
