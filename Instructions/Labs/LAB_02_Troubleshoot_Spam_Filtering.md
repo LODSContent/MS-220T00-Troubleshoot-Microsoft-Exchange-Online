@@ -71,7 +71,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 
 ## Instructions
 
-### Task 1 - Create a Spam filtering Policy
+### Task 1 - Create a Spam Filtering Policy
 
 In this task, you'll use the default global admin to sign into Microsoft 365 Defender and modify the existing default Anti-spam inbound policy to reflect the new policy requirements.
 
@@ -129,7 +129,7 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
 12. Select **Close** to close the **Anti-spam inbound policy (Default)** pane and proceed to the next task.
 
-### Task 2 - Test Anti-spam behavior
+### Task 2 - Test Anti-Spam Behavior
 
 In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It's crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the number of junk email that users may receive day to day.
 
@@ -227,7 +227,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
     Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in **Microsoft Edge** and proceed to the next task.
 
-### Task 4 - Review a Message Trace using PowerShell
+### Task 4 - Review a Message Trace Using PowerShell
 
 In this task, you'll be running a message trace using PowerShell instead of using the Message trace functionality built into the Exchange Admin Center (EAC). The purpose of this task is to give you exposure to alternative methods of accomplishing day to day tasks an Exchange Administrator may need to perform.
 
