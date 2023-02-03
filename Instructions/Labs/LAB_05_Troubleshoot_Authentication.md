@@ -66,7 +66,7 @@ Besides the single VM, you'll also be provided with a Microsoft 365 tenant with 
 
 ## Instructions
 
-### Task 1 - Configure Progress Telerik Fiddler Classic App
+### Task 1 - Download and Configure Progress Telerik Fiddler Classic
 
 In this task, you'll download, install and configure Fiddler Classic.
 
@@ -224,7 +224,7 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
     If Outlook is still open at this time, please close it now as well.
 
-### Task 3 - Enable ADAL on local PC
+### Task 3 - Enable ADAL on Local PC
 
 In this final lab task, you'll reenable the Microsoft Authentication Library (ADAL) which is needed to support the use of modern authentication and MFA.
 
