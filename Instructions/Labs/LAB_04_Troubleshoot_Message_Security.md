@@ -266,7 +266,7 @@ In the previous task you created a new Mail flow rule to add Office Message encr
 
     If you're using a personal Microsoft Outlook email account, leave the **InPrivate** Microsoft Edge Browser open.
 
-### Task 4 - Resolve Office Message Encryption Permission issue
+### Task 4 - Resolve an Office Message Encryption Permission Issue
 
 In the previous task, we identified an issue where our external partners were receiving permission-related issues when attempting to open Project Falcon encrypted emails. In this lab task, you'll review the configuration settings in the "Project Falcon" Sensitivity label and modify the settings in order to allow these partners to view the emails.
 
