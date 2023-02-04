@@ -104,7 +104,7 @@ In this task, you'll use the default global admin to sign in to the Outlook for 
 
 6. In the message pane that appears on the right-side of the screen, enter the following information:
 
-    - To: enter **User@contoso.com**
+    - To: enter **User1@contoso.com**
 
     - Subject: enter **This is a Test Email**
 
