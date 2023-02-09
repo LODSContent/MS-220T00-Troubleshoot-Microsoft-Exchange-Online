@@ -235,13 +235,13 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 2. Minimize the **Microsoft Edge** browser window and open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
-3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press **Enter**:
 
      `Install-Module -Name ExchangeOnlineManagement`
 
 4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
 
-5. At the command prompt, type the following command and press Enter:
+5. At the command prompt, type the following command and press **Enter**:
 
      `Connect-ExchangeOnline`
 
@@ -249,11 +249,11 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 7. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
 
-8. At the command prompt, type the following command and press Enter:
+8. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTrace = Get-MessageTrace -MessageId "Add message ID here copied in Task 3 step 11"`
 
-9. At the command prompt, type the following command and press Enter:
+9. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTrace | FL`
 
@@ -271,15 +271,15 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
     This may be enough details for some to determine minor mail flow issues, however we can take it a step further using the **Get-MessageTraceDetail** Exchange Online Command-let (CMDLET).
 
-10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press Enter:
+10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTraceId = $MessageTrace.MessageTraceId`
 
-11. At the command prompt, type the following command and press Enter:
+11. At the command prompt, type the following command and press **Enter**:
 
       `$RecipientAddress = $MessageTrace.RecipientAddress`
 
-12. Now we're ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press Enter:
+12. Now we're ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press **Enter**:
 
       `Get-MessageTraceDetail -MessageTraceId $MessageTraceId -RecipientAddress $RecipientAddress | FL`
 
