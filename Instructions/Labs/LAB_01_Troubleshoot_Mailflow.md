@@ -100,7 +100,7 @@ In this task, you'll use the default global admin to sign in to the Outlook for 
 
 4. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **Yes**.
 
-5. you're now signed into MOD Administrators mailbox. You'll begin by sending an email to a random user with the domain name **Contoso.com**. In the upper left-hand corner, select **New mail**.
+5. You're now signed into MOD Administrators mailbox. You'll begin by sending an email to a random user with the domain name **Contoso.com**. In the upper left-hand corner, select **New mail**.
 
 6. In the message pane that appears on the right-side of the screen, enter the following information:
 
@@ -108,7 +108,7 @@ In this task, you'll use the default global admin to sign in to the Outlook for 
 
     - Subject: enter **This is a Test Email**
 
-    - Message Body: Enter **this is a Test Email**
+    - Message Body: Enter **This is a Test Email**
 
 7. Select **Send**.
 
@@ -194,7 +194,7 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
 2. Once logged into **LON-CL1**, open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
-3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press **Enter**:
 
       `Install-Module -Name ExchangeOnlineManagement`
 
@@ -204,7 +204,7 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
 5. If you're prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All**.
 
-6. At the command prompt, type the following command and press Enter:
+6. At the command prompt, type the following command and press **Enter**:
 
      `Connect-ExchangeOnline`
 
@@ -212,13 +212,13 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
 8. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
 
-9. At the command prompt, type the following command and press Enter:
+9. At the command prompt, type the following command and press **Enter**:
 
       `Get-TransportRule | FT Name, Guid`
 
      Several transport rules should be displayed. Verify that **Rule 1** corresponds with the GUID (ID) collected earlier in Task 2 step 17.
 
-10. After verifying the GUID is a match for **Rule 1**, at the command prompt type the following and hit enter:
+10. After verifying the GUID is a match for **Rule 1**, at the command prompt type the following and hit **enter**:
 
       `Get-TransportRule -Identity "Rule 1" | FL`
 
