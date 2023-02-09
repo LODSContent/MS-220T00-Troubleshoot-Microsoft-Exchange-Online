@@ -102,7 +102,7 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
 4. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **No**.
 
-5. you're now signed into **Alex Deyoung's** mailbox. You'll begin by sending an email to **Alex Wilber**, another user in your tenant.
+5. You're now signed into **Alex Deyoung's** mailbox. You'll begin by sending an email to **Alex Wilber**, another user in your tenant. In the upper left-hand corner, select **New mail**.
 
 6. In the message pane that appears on the right-side of the screen, enter the following information:
 
@@ -280,7 +280,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 2. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
-3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press **Enter**:
 
      `Install-Module -Name ExchangeOnlineManagement`
 
@@ -288,7 +288,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
 
-5. At the command prompt, type the following command and press Enter:
+5. At the command prompt, type the following command and press **Enter**:
 
      `Connect-ExchangeOnline`
 
@@ -296,11 +296,11 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 7. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
 
-8. At the command prompt, type the following command press Enter:
+8. At the command prompt, type the following command press **Enter**:
 
      `CD C:\Users\administrator\desktop\'Lab scripts'\'lab 3'`
 
-9. At the command prompt, type the following command press Enter:
+9. At the command prompt, type the following command press **Enter**:
 
     `.\GetFolderSearchParameters.ps1`
 
@@ -314,11 +314,11 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     **folderid:47EFE4AD1A8641408C8CCB0EDA12ACCE00000000010C0000**
 
-13. We'll now start a new compliance search. To do this, we must first connect to the Security & Compliance PowerShell module. At the command prompt. type the following command press Enter:
+13. We'll now start a new compliance search. To do this, we must first connect to the Security & Compliance PowerShell module. At the command prompt. type the following command press **Enter**:
 
     `Connect-IPPSSession -UserPrincipalName admin@M365xZZZZZZ.onmicrosoft.com`
 
-14. Next, at the command prompt, type the following command press Enter:
+14. Next, at the command prompt, type the following command press **Enter**:
 
     `$Search = New-ComplianceSearch -Name "Inbox Search AlexW" -ExchangeLocation All -ContentMatchQuery '"Past FolderId here"(c:c)(subject:Confidential)'`
 
@@ -326,25 +326,25 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     **folderid:29563324EDBAD64D94CED5C383FE47E000000000010C0000(c:c)(subject:Confidential)**
 
-15. To start the compliance search, at the command prompt type the following command press Enter:
+15. To start the compliance search, at the command prompt type the following command press **Enter**:
 
     `Start-ComplianceSearch -Identity $Search.Identity`
 
-16. It Will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press Enter:
+16. It Will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press **Enter**:
 
     `Get-ComplianceSearch -Identity "Inbox Search AlexW"`
 
-17. Once the status shows as **Completed**, type the following command press Enter:
+17. Once the status shows as **Completed**, type the following command press **Enter**:
 
     `Get-ComplianceSearch -Identity "Inbox Search AlexW" | FL`
 
     **Note:**: The search results display all users, but we only have an item count greater than 0 for Alex Wilber. This is because in the command ran above, we've exchangelocation -all. If we want to specific a single mailbox we can rerun the command and set the exchange location to the SMTP of Alex Wilber.
 
-18. To remove the confidential items identified out of Alex's inbox we'll need to start a new compliance action. At the command prompt type the following command press Enter:
+18. To remove the confidential items identified out of Alex's inbox we'll need to start a new compliance action. At the command prompt type the following command press **Enter**:
 
     `New-ComplianceSearchAction -SearchName "Inbox Search AlexW" -Purge -PurgeType HardDelete -Confirm:$false`
 
-19. It Will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press Enter:
+19. It Will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press **Enter**:
 
     `Get-ComplianceSearchAction "Inbox search AlexW_Purge" | FL`
 
@@ -358,7 +358,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
 23. On the **Stay signed in?** window, select the **Don’t show this again** check box and then select **No**.
 
-24. you're now logged into **Outlook on the Web** against Alex Wilbers Mailbox. Take a few minutes to check Alex's **Inbox** & **Deleted items**.
+24. You're now logged into **Outlook on the Web** against Alex Wilbers Mailbox. Take a few minutes to check Alex's **Inbox** & **Deleted items**.
 
     Notice the confidential email sent by **Allan Deyoung** isn't visible in any of Alex's mailbox folders. This indicates that you've successfully purged the confidential item.
 
