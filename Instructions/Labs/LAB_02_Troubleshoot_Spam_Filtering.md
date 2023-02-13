@@ -2,9 +2,9 @@
 
 ## Lab scenario
 
-In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. you've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
+In the labs for this course, you're taking on the role of Adatum Corporations Messaging Administrator. You've deployed Microsoft 365 in a virtualized lab environment, and you've been tasked with completing a pilot that tests various M365 & Exchange functionalities as they relate to Adatum's business requirements.
 
-In this lab, you'll be implementing and configuring spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
+In this lab, you'll be implementing and configuring a spam filtering policy for your organization. The primary objective of this lab is to create a policy that contains the following settings:
 
 - Empty messages: **On**
 - Embedded tags in HTML: **On**
@@ -12,7 +12,7 @@ In this lab, you'll be implementing and configuring spam filtering policy for yo
 - SPF record hard fail: **On**
 - Sender ID filtering hard fail: **On**
 
-The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that its working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a custom spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
+The goal of this lab is to create a policy that will effectively block spam and unwanted messages, while allowing legitimate messages to pass through. Once the policy has been created, you'll test its behavior to ensure that its working as expected. This will involve sending test messages through the policy and observing the results. If any issues are identified, you'll need to investigate and resolve them. By the end of this lab, you'll have a spam filtering policy in place that will help to protect your organization's email communication and ensure that your users receive only the messages that are important to them.
 
 ## Lab Setup
 
@@ -71,7 +71,7 @@ If you don't have a Personal Microsoft Outlook email account, you can follow the
 
 ## Instructions
 
-### Task 1 - Create a Spam filtering Policy
+### Task 1 - Create a Spam Filtering Policy
 
 In this task, you'll use the default global admin to sign into Microsoft 365 Defender and modify the existing default Anti-spam inbound policy to reflect the new policy requirements.
 
@@ -129,7 +129,7 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
 12. Select **Close** to close the **Anti-spam inbound policy (Default)** pane and proceed to the next task.
 
-### Task 2 - Test Anti-spam behavior
+### Task 2 - Test Anti-Spam Behavior
 
 In this task, you'll be partnering up with a fellow student to exchange emails with to test the modified policies behavior. It's crucial to always test any new or modified Anti-Spam policy as it will have a direct impact on the number of junk email that users may receive day to day.
 
@@ -227,7 +227,7 @@ In the prior task, you identified that our test email landed in your junk email 
 
     Once the **Message Id** had been copied you can exit out of the **Message Header Analyzer** tab in **Microsoft Edge** and proceed to the next task.
 
-### Task 4 - Review a Message Trace using PowerShell
+### Task 4 - Review a Message Trace Using PowerShell
 
 In this task, you'll be running a message trace using PowerShell instead of using the Message trace functionality built into the Exchange Admin Center (EAC). The purpose of this task is to give you exposure to alternative methods of accomplishing day to day tasks an Exchange Administrator may need to perform.
 
@@ -235,13 +235,13 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 2. Minimize the **Microsoft Edge** browser window and open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do NOT select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu.
 
-3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+3. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following command and press **Enter**:
 
      `Install-Module -Name ExchangeOnlineManagement`
 
 4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
 
-5. At the command prompt, type the following command and press Enter:
+5. At the command prompt, type the following command and press **Enter**:
 
      `Connect-ExchangeOnline`
 
@@ -249,11 +249,11 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 7. In the **Enter password** window, enter the password for this admin account provided by your learning provider, and then select **Sign in**. It may take a moment to sign in before it returns a command prompt.
 
-8. At the command prompt, type the following command and press Enter:
+8. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTrace = Get-MessageTrace -MessageId "Add message ID here copied in Task 3 step 11"`
 
-9. At the command prompt, type the following command and press Enter:
+9. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTrace | FL`
 
@@ -271,15 +271,15 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
     This may be enough details for some to determine minor mail flow issues, however we can take it a step further using the **Get-MessageTraceDetail** Exchange Online Command-let (CMDLET).
 
-10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press Enter:
+10. We first need to define several variables to make writing out the full command a bit easier. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTraceId = $MessageTrace.MessageTraceId`
 
-11. At the command prompt, type the following command and press Enter:
+11. At the command prompt, type the following command and press **Enter**:
 
       `$RecipientAddress = $MessageTrace.RecipientAddress`
 
-12. Now we're ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press Enter:
+12. Now we're ready to type out the full **Get-MessageTraceDetail** CMDLET. At the command prompt, type the following command and press **Enter**:
 
       `Get-MessageTraceDetail -MessageTraceId $MessageTraceId -RecipientAddress $RecipientAddress | FL`
 
