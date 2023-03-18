@@ -192,7 +192,7 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
     **Note:** Because not all lab VMs are created equally, you may experience variations of behavior performing steps 4-9, but ultimately the end result should remain the same; the Outlook profile fails to be created. You may also see behavior where the profile is created but fails to connect to Exchange Online:
 
-    ![Microsoft Outlook Warning](/Images/Microsoft_Outlook_warning.png)
+    ![Microsoft Outlook Warning](/Images/Microsoft_Outlook_Warning.png)
 
 9. Maximize the Fiddler application window.
 
@@ -202,7 +202,7 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
 12. While on the **Inspectors** tab, select **Raw** for both the Request and Response headers. Your screen should look similar to the following:
 
-    ![Microsoft Outlook Warning](/Images/Fiddler_inspectors.png)
+    ![Microsoft Outlook Warning](/Images/Fiddler_Inspectors.png)
 
     You should now have the first **401** result selected With Fiddler configured to view the request and response headers as raw text files. Take a moment to review all of its contents.
 
