@@ -118,7 +118,7 @@ In this lab task, you'll create a Sensitivity label named "Highly Confidential -
 
     - Allow offline access - select **Never**
 
-12. While still on the **Encryption page**, Under the **Assign permissions to a specific user or groups** select the **Assign permissions** link. A new window displaying **Assign permissions** Should now be displayed on the right-hand side of the screen. Configure the following options:
+12. While still on the **Encryption page**, Under the **Assign permissions to a specific user or groups** select the **Assign permissions** link. A new window displaying **Assign permissions** should now be displayed on the right-hand side of the screen. Configure the following options:
 
     - Select **+ Add users or groups**. From the list of users that is displayed, select **MOD Administrator** & **Allan Deyoung** and then select **Add**.
 
@@ -142,7 +142,7 @@ In this lab task, you'll create a Sensitivity label named "Highly Confidential -
 
 20. A **Choose sensitivity labels to publish** page should be displayed. Under **Sensitivity labels to publish**, select the **Edit** link.
 
-21. on the **Sensitivity labels to publish** page that appears, scroll down to the bottom and enable (Check) **Project Falcon** and then select **Add**.
+21. On the **Sensitivity labels to publish** page that appears, scroll down to the bottom and enable (Check) **Project Falcon** and then select **Add**.
 
 22. Select **Next** on all proceeding pages until you reach **Review and finish** and then select **Submit**.
 
@@ -184,7 +184,7 @@ In this task, you'll be implementing a new Mail flow rule to encrypt emails when
 
 9. This brings you back to the **Set rule conditions** page. Under **Do the following**, next to **Rights protect message with** select the **Select one** link.
 
-10. In the **Select RMS template** window that appears, select **Project Falcon** From the drop-down menu and then select **Save**.
+10. In the **Select RMS template** window that appears, select **Highly Confidential - All Employees** From the drop-down menu and then select **Save**.
 
 11. Back on the **Set rule conditions** page, leave the **Except if** condition as the default setting, and then select **Next.**
 
@@ -196,9 +196,9 @@ In this task, you'll be implementing a new Mail flow rule to encrypt emails when
 
     It may take up to a minute to create the rule. Once **Transport rule created successfully** is displayed, select **Done**.
 
-14. You'll now be brought back to the **Rules** page. Notice the rule **Sensitive material** shows a status of **Disabled**.
+14. You'll now be brought back to the **Rules** page. Notice the rule **Project Falcon** shows a status of **Disabled**.
 
-    Select the word **Disabled** which will open up a new window for the **Sensitive material** rule settings. Under **Enable or disable rule** select the slider button so that it shows **Enabled** and then close the window by selecting **X** in the upper right-hand corner.
+    Select the word **Disabled** which will open up a new window for the **Project Falcon** rule settings. Under **Enable or disable rule** select the slider button so that it shows **Enabled** and then close the window by selecting **X** in the upper right-hand corner.
 
     **Note:** After enabling the rule, it may take up to a minute for the rule to refresh and display as enabled.
 
@@ -318,7 +318,7 @@ In the previous task, we identified an issue where our external partners were re
 
 14. On the **Review your settings and finish** page, review all the configured settings. If needed, you can modify the settings by clicking the **Edit** link under the setting name. When finished reviewing the settings, select **Save label**.
 
-    When prompted **Label updates**, select **Done**.
+    When prompted **Label updated**, select **Done**.
 
 15. A new window displaying **Choose sensitivity labels to publish** will appear. As we've already published this label to the default label policy, select **Cancel**.
 

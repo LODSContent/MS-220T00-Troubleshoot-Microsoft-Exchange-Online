@@ -210,7 +210,7 @@ Once all settings are correct, select **Submit**.
 
     Because the **MOD Administrator** account isn't assigned the eDiscovery Manager or eDiscover Admin role group, you're unable to view the search results. This is because these eDiscover roles aren't assigned by default to the Organization Management role group, therefore it’s not a part of the Global admin role. For more information, on what permissions you do have as part of the Organization Management role group, see [RBAC roles related to eDiscovery]( https://learn.microsoft.com/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide#rbac-roles-related-to-ediscovery?azure-portal=true).
 
-    Select **OK** and then select **Close** to exit out of the **Confidential search** pane.
+    Exit out of the **Confidential search** pane by selecting **X** in the upper right-hand corner
 
 ### Task 2 - Review eDiscovery Permissions
 
@@ -248,7 +248,7 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
 14. Back on the **Chose eDiscovery Administrator** pane, you should now see both **Nestor Wilke** and **MOD Administrator** listed as members. Select **Done**, **Save**, **Close**.
 
-    you've now successfully added a second **eDiscovery Administrator** role group member.
+    You've now successfully added a second **eDiscovery Administrator** role group member.
 
 15. Next we'll navigate back to **Microsoft Purview** compliance portal. Open a new **Microsoft Edge** tab and enter the following URL: **<https://compliance.microsoft.com>**.
 
@@ -260,7 +260,7 @@ In this task, you'll be utilizing Microsoft 365 tools such as Exchange admin cen
 
     You'll now review the previous search case created that checks for emails that contain **Sensitive, Confidential, Secret** in the Subject line.
 
-19. select **Confidential search**.
+19. Select **Confidential search**.
 
 20. In the **Confidential Search** pane, select **Review sample**.
 
@@ -330,7 +330,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     `Start-ComplianceSearch -Identity $Search.Identity`
 
-16. It Will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press **Enter**:
+16. It will take a few minutes for the compliance search to complete. To check its status, at the command prompt type the following command press **Enter**:
 
     `Get-ComplianceSearch -Identity "Inbox Search AlexW"`
 
@@ -344,7 +344,7 @@ In this task, we'll outline the process for connecting to and utilizing the Exch
 
     `New-ComplianceSearchAction -SearchName "Inbox Search AlexW" -Purge -PurgeType HardDelete -Confirm:$false`
 
-19. It Will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press **Enter**:
+19. It will take a few minutes for the compliance action to complete. To check its status, at the command prompt type the following command press **Enter**:
 
     `Get-ComplianceSearchAction "Inbox search AlexW_Purge" | FL`
 

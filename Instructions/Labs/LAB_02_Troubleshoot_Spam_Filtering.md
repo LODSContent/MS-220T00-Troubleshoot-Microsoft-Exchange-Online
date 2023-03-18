@@ -241,6 +241,8 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 
 4. You might be prompted "NuGet provider is required to continue", enter [Y] Yes [N] No [S] Suspend [?], enter **Y** to select **[Y] Yes**
 
+   You may also see the prompt "You are installing the modules from an untrusted repository...", enter **Y** to select **[Y] yes**
+
 5. At the command prompt, type the following command and press **Enter**:
 
      `Connect-ExchangeOnline`
@@ -252,6 +254,8 @@ In this task, you'll be running a message trace using PowerShell instead of usin
 8. At the command prompt, type the following command and press **Enter**:
 
       `$MessageTrace = Get-MessageTrace -MessageId "Add message ID here copied in Task 3 step 11"`
+
+    **Important**: Remove the quoted statement after -MessageId from the command above and replace with the message ID string copied from Task 3 step 11
 
 9. At the command prompt, type the following command and press **Enter**:
 

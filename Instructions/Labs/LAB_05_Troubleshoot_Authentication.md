@@ -72,7 +72,7 @@ In this task, you'll download, install and configure Fiddler Classic.
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
-2. navigate to the following URL: **<https://www.telerik.com/download/Fiddler>**
+2. Navigate to the following URL: **<https://www.telerik.com/download/Fiddler>**
 
 3. On the left-hand side of the webpage appears, in the drop-down menu **How do you plan to use Fiddler?**, select **Client application development/debugging**.
 
@@ -98,7 +98,7 @@ In this task, you'll download, install and configure Fiddler Classic.
 
 11. On the **Select the directory to install Progress Telerik Fiddler Classic**, leave the default destination folder and select **Install**.
 
-12. Once installed, close out of the **First run** tab opened in **Microsoft Edge** and minimus your browser.
+12. Once installed, close out of the **First run** tab opened in **Microsoft Edge** and minimize your browser.
 
 13. The install should show completed, select **Close**.
 
@@ -112,7 +112,7 @@ In this task, you'll download, install and configure Fiddler Classic.
 
     **Note:** You should see the check mark next to **Capture Traffic** disappear indicating traffic capture is no longer occurring.
 
-18. In Fiddler, select **Tools** From the menu and then select **Options**.
+18. In Fiddler, select **Tools** from the menu and then select **Options**.
 
 19. In the Fiddler options prompt, select the **HTTPS** tab.
 
@@ -170,7 +170,7 @@ In this task, you'll utilize Fiddler Classic to review and test the behavior of 
 
 3. Navigate back to the Outlook prompt and under **Email address** enter: **AllanD@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Connect**.
 
-    **Note:** Over if Fiddler, you should now see some results populating. You'll also be prompted with a **Windows Security** prompt:
+    **Note:** Over in Fiddler, you should now see some results populating. You'll also be prompted with a **Windows Security** prompt:
 
     ![Windows Security Prompt](/Images/Windows_security_prompt.png)
 
@@ -232,7 +232,7 @@ In this final lab task, you'll reenable the Microsoft Authentication Library (AD
 
 2. In the windows taskbar, select the search icon and type in **RegEdit**.
 
-3. Right-click **RegEdit** and select **Run as Administrator**.
+3. Right-click **Registry Editor** and select **Run as Administrator**.
 
 4. Navigate to the following location: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity**
 
@@ -264,7 +264,7 @@ In this final lab task, you'll reenable the Microsoft Authentication Library (AD
 
 14. On the **stay signed in to all your apps** prompt, select **No, sign in to this app only**.
 
-15. on the **Account successfully added** prompt, select **Done**.
+15. On the **Account successfully added** prompt, select **Done**.
 
 16. Once Outlook opens up to Allan's mailbox, verify that the account is connected to Exchange at the bottom right-hand corner of the screen, which should display **Connected to: Microsoft Exchange**
 

@@ -246,13 +246,13 @@ In previous tasks you identified that a mail flow was blocking messages during t
 
 15. On the **Rule 1** details page that appears on the right, take a moment to review the details. They should match what we saw when reviewing the rule within PowerShell.
 
-16. To resolve our transport issue, we'll now disable **Rule 1** by select the slider under **Enable or disable rule**.
+16. To resolve our transport issue, we'll now disable **Rule 1** by selecting the slider under **Enable or disable rule**.
 
     The rule should now show as disabled. Select the **X** at the top right-hand corner of the rule details page to exit.
 
     Back on the **Rules** page, **Rule 1** should now show a status of **Disabled**.
 
-    You can now close the **Exchange admin center** tab in your **Microsoft Edge** browser. You should still
+    You can now close the **Exchange admin center** tab in your **Microsoft Edge** browser. 
 
 17. Navigate back to the **Microsoft 365 admin center** by click The **Home - Microsoft 365 admin center** tab that should still be open in your **Microsoft Edge** browser.
 
