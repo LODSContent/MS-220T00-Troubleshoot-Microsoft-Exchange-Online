@@ -77,6 +77,22 @@ In this task, you'll use the default global admin to sign into Microsoft 365 Def
 
 1. On **LON-CL1**, select **Ctrl+Alt+Delete** to sign-in. Sign-into **LON-CL1** as the local administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**.
 
+1. First, you'll open an elevated instance of Windows PowerShell. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type powershell in the Search box that appears. In the list of search results, right-click on Windows PowerShell (do NOT select Windows PowerShell ISE) and select Run as administrator in the drop-down menu.
+
+1. Maximize your PowerShell window. In Windows PowerShell, at the command prompt, type the following commands and press Enter (one at a time):
+
+     `Install-Module -Name ExchangeOnlineManagement`
+     <BR>
+     `Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force`
+     <Br>
+     `Connect-ExchangeOnline`
+
+1. A Microsoft 365 Sign in window will appear. Enter in the username for the Mod Administrator account provided by your learning provider (admin@M365xZZZZZZ.onmicrosoft.com) and then select Next.
+
+1. In Windows PowerShell, at the command prompt, type the following command and press Enter:
+
+    `Enable-OrganizationCustomization`
+
 2. You'll now access **Microsoft 365 Defender** from LON-CL1. Select the **Microsoft Edge** icon from your taskbar and enter the following URL in the address bar: **<https://security.microsoft.com>**.
 
     If prompted, Sign-in with the tenant email account provided (**admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is your unique
