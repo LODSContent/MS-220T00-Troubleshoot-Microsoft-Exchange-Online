@@ -1,3 +1,5 @@
+**This course will be retiring on  **2023/7/31**.  Once course is retired, all GitHub repos will be removed. Thank you.**
+
 # MS-220T00: Troubleshooting Microsoft Exchange Online
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
